@@ -54,7 +54,7 @@ border: 0;
   Note: box-sizing will not work in IE6-8
 */
 
-.wrapper {
+.wrapper, {
 padding: 0 (@line/2)/@em;
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
@@ -567,7 +567,7 @@ h1 {
 .large();
 }
 
-#quarter h3, #third h3, {
+#quarter h3, #third h3 {
 float: left;
 margin: 0;
 clear: left;
@@ -679,9 +679,13 @@ float: left;
 width: 33%;
 }
 
-#half div.wrapper {
+#half div.wrapper2c1 {
 float: left;
-width: 50%;
+width: @2c1;
+}
+#half div.wrapper2c2 {
+float: left;
+width: @2c2;
 }
 
 #quarter h3, #third h3 {
@@ -748,8 +752,11 @@ width: 25%;
 width: 33%;
 }
 
-#half div.wrapper {
-width: 50%;
+#half div.wrapper2c1 {
+width: @2c1;
+}
+#half div.wrapper2c2 {
+width: @2c2;
 }
 
 #quarter div p, #third div p {
@@ -823,11 +830,19 @@ width: 33%;
 float: left;
 }
 
-#half div.wrapper {
-width: 50%;
+#half div.wrapper2c1 {
+width: @2c1;
 }
-#third div.wrapper {
-width: 50%;
+#half div.wrapper {
+width: @2c1;
+float: left;
+}
+
+#half div.wrapper2c2 {
+width: @2c2;
+}
+#half div.wrapper {
+width: @2c2;
 float: left;
 }
 
@@ -864,10 +879,17 @@ width: 33%;
 .normal();
 }
 
-#half div.wrapper {
-width: 50%;
+#half div.wrapper2c1 {
+width: @2c1;
 }
-#third div p {
+#half div p {
+.normal();
+}
+
+#half div.wrapper2c2 {
+width: @2c2;
+}
+#half div p {
 .normal();
 }
 
