@@ -53,7 +53,7 @@ border: 0;
   Note: box-sizing will not work in IE6-8
 */
 
-.wrapper, {
+.wrapper, .wrapper2c1, .wrapper2c2 {
 padding: 0 (@line/2)/@em;
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
@@ -219,8 +219,8 @@ color: @body;
 margin: 0 @column;
 }
 
-.wrapper {
-position: relative;
+.wrapper, .wrapper2c1, .wrapper2c2 {
+position: relative;	
 }
 
 #masthead {
@@ -566,14 +566,7 @@ h1 {
 .large();
 }
 
-#quarter h3, {
-float: left;
-margin: 0;
-clear: left;
-width: (@font-size*(@multiplier * 5))/@em;
-}
-
-#third h3 {
+#quarter h3, #third h3 {
 float: left;
 margin: 0;
 clear: left;
@@ -582,6 +575,7 @@ width: (@font-size*(@multiplier * 5))/@em;
 
 #quarter div p, #third div p   {
 margin-top: 24/@em;
+padding:1px;
 }
 
 #quarter div p, #third div p  {
@@ -697,7 +691,7 @@ float: left;
 width: @2c2;
 }
 
-#quarter h3, #third h3 {
+#quarter h3, #third h3, #half {
 float: none;
 clear: none;
 width: auto;
@@ -825,38 +819,6 @@ margin-bottom: 12 / 42*1em;
 
 #masthead p {
 .huge();
-}
-
-#quarter div.wrapper {
-width: 25%;
-}
-#quarter div.wrapper {
-width: 25%;
-float: left;
-}
-
-#third div.wrapper {
-width: 33%;
-}
-#third div.wrapper {
-width: 33%;
-float: left;
-}
-
-#half div.wrapper2c1 {
-width: @2c1;
-}
-#half div.wrapper2c1 {
-width: @2c1;
-float: left;
-}
-
-#half div.wrapper2c2 {
-width: @2c2;
-}
-#half div.wrapper2c2 {
-width: @2c2;
-float: left;
 }
 
 #guides {
