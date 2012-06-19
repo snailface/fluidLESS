@@ -25,7 +25,6 @@ padding: 0;
 border: 0;
 }
 
-
 /*
   Consistency fixes adopted from http://necolas.github.com/normalize.css/
 */
@@ -96,7 +95,7 @@ line-height: (@line*2) / 42 * 1em; // 48 px
 .massive {
 font-size: (@font-size * 3) / @em; // 68px
 line-height: (@line*3) / 68 * 1em; // 72 px
-}
+}	
 
 .gigantic {
 font-size: (@font-size * 4) / @em; // 110px
@@ -567,19 +566,25 @@ h1 {
 .large();
 }
 
-#quarter h3, #third h3 {
+#quarter h3, {
 float: left;
 margin: 0;
 clear: left;
 width: (@font-size*(@multiplier * 5))/@em;
 }
 
-#quarter div p, third div p  {
+#third h3 {
+float: left;
+margin: 0;
+clear: left;
+width: (@font-size*(@multiplier * 5))/@em;
+}
 
+#quarter div p, #third div p   {
 margin-top: 24/@em;
 }
 
-#quarter div p {
+#quarter div p, #third div p  {
 padding-left: 115/@em;
 }
 
@@ -699,9 +704,10 @@ width: auto;
 margin: 24/@em 0 24/@em;
 }
 
-#quarter div p {
+#quarter div p, #third div p {
 padding: 0;
 }
+
 
 #guide {
 float: left;
@@ -884,7 +890,6 @@ width: 25%;
 }
 
 #third div.wrapper {
-width: 33%;
 }
 #third div p {
 .normal();
@@ -929,7 +934,7 @@ margin-right: @column*2;
 }
 
 #quarter div.wrapper {
-width: 25%%;
+width: 25%;
 }
 #quarter div p {
 .small();
