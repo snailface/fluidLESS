@@ -26,7 +26,6 @@ h1,h2,h3,h4,h5,h6,p,blockquote,pre,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,
 margin: 0;
 padding: 0;
 border: 0;
-z-index: 10;
 }
 h1,h2,h3,h4,h5,h6,a,p {
 z-indez:1000;
@@ -140,7 +139,7 @@ article p:last-child {
 margin-bottom: 0;
 }
 
-#content header p {
+#content header p, #content div {
 padding-bottom: 23/@em;
 border-bottom: 1/@em dotted @body;
 margin: 0;
@@ -154,7 +153,7 @@ h3 {
 margin: 48/@em 0 24/@em;
 }
 
-#quarter h3, #third h3, #halve h3 #guide h3 {
+#quarter h3 {
 margin: 24/@em 0 0;
 }
 
@@ -581,19 +580,19 @@ h1 {
 .large();
 }
 
-#quarter h3, #third h3 {
+#quarter h3 {
 float: left;
 margin: 0;
 clear: left;
 width: (@font-size*(@multiplier * 5))/@em;
 }
 
-#quarter div p, #third div p   {
+#quarter div p {
 margin-top: 24/@em;
 padding:1px;
 }
 
-#quarter div p, #third div p  {
+#quarter div p  {
 padding-left: 115/@em;
 }
 
@@ -687,7 +686,7 @@ right: auto; left: -100%;
 margin: 0 12/@em;
 }
 
-#quarter h3, #third h3, #halve h3 {
+#quarter h3 {
 float: none;
 clear: none;
 width: auto;
@@ -758,6 +757,12 @@ margin-left: @column*3;
 margin-right: @column*3;
 }
 
+#quarter div.wrapper {
+width: @4c1;
+float: left;
+}
+
+/*
 #quarter div.wrapper4c1 {
 width: @4c1;
 float: left;
@@ -774,9 +779,15 @@ float: left;
 width: @4c4;
 float: left;
 }
+*/
 
 #third div.wrapper {
+
 width: 33%;
+}
+
+#quarter div p, #third div p {
+.small();
 }
 
 #halve div.wrapper2c1 {
@@ -786,9 +797,6 @@ width: @2c1;
 width: @2c2;
 }
 
-#quarter div p, #third div p {
-.small();
-}
 
 }
 
@@ -866,14 +874,6 @@ margin-left: @column*2;
 margin-right: @column*2;
 }
 
-#quarter div.wrapper {
-}
-#quarter div p {
-.normal();
-}
-}
-
-
 #third div.wrapper {
 }
 #third div p {
@@ -892,11 +892,12 @@ margin-right: @column*2;
 .normal();
 }
 
-
-
-
-
-
+#quarter div.wrapper {
+}
+#quarter div p {
+.normal();
+}
+}
 
 /*
 *
