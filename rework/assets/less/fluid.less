@@ -11,7 +11,10 @@
 */
 
 @import 'helpful-LESS-functions.less';
+
 @import 'custom.less';
+
+
 
 /*
   Margin, padding, and border resets
@@ -23,7 +26,15 @@ h1,h2,h3,h4,h5,h6,p,blockquote,pre,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,
 margin: 0;
 padding: 0;
 border: 0;
+z-index: 10;
 }
+h1,h2,h3,h4,h5,h6,a,p {
+z-indez:1000;
+}
+
+// see Troubleshooting.less to toggle options
+@import 'troubleshooting.less';
+
 
 /*
   Consistency fixes adopted from http://necolas.github.com/normalize.css/
@@ -60,6 +71,10 @@ padding: 0 (@line/2)/@em;
 -o-box-sizing: border-box;
 -ms-box-sizing: border-box;
 box-sizing: border-box;
+}
+
+.wrapper2c1, .wrapper2c2 {
+float: left;
 }
 
 /*
@@ -139,7 +154,7 @@ h3 {
 margin: 48/@em 0 24/@em;
 }
 
-#quarter h3, #third h3, #guide h3 {
+#quarter h3, #third h3, #halve h3 #guide h3 {
 margin: 24/@em 0 0;
 }
 
@@ -672,36 +687,31 @@ right: auto; left: -100%;
 margin: 0 12/@em;
 }
 
-#quarter div.wrapper {
-float: left;
-width: 25%;
-}
-
-#third div.wrapper {
-float: left;
-width: 33%;
-}
-
-#halve div.wrapper2c1 {
-float: left;
-width: @2c1;
-}
-#halve div.wrapper2c2 {
-float: left;
-width: @2c2;
-}
-
-#quarter h3, #third h3, #half {
+#quarter h3, #third h3, #halve h3 {
 float: none;
 clear: none;
 width: auto;
 margin: 24/@em 0 24/@em;
 }
 
+#quarter div.wrapper {
+width: 25%;
+}
+
+#third div.wrapper {
+width: 33%;
+}
+
 #quarter div p, #third div p {
 padding: 0;
 }
 
+#halve div.wrapper2c1 {
+width: @2c1;
+}
+#halve div.wrapper2c2 {
+width: @2c2;
+}
 
 #guide {
 float: left;
@@ -748,8 +758,21 @@ margin-left: @column*3;
 margin-right: @column*3;
 }
 
-#quarter div.wrapper {
-width: 25%;
+#quarter div.wrapper4c1 {
+width: @4c1;
+float: left;
+}
+#quarter div.wrapper4c2 {
+width: @4c2;
+float: left;
+}
+#quarter div.wrapper4c3 {
+width: @4c3;
+float: left;
+}
+#quarter div.wrapper4c4 {
+width: @4c4;
+float: left;
 }
 
 #third div.wrapper {
@@ -782,6 +805,7 @@ font-size: (@font-size + 1) / @em;
 }
 
 }
+
 
 
 /*
@@ -843,13 +867,12 @@ margin-right: @column*2;
 }
 
 #quarter div.wrapper {
-width: 25%;
 }
 #quarter div p {
 .normal();
 }
-
 }
+
 
 #third div.wrapper {
 }
@@ -868,6 +891,8 @@ width: 25%;
 #halve div p {
 .normal();
 }
+
+
 
 
 
@@ -913,54 +938,5 @@ width: 50%;
 #halve div p {
 .small();
 }
-
 }
 
-/*
-*
-* Zoom baseline grid to 19/16 = 1.1875
-*
-*/
-
-@media screen and (min-width: 4104px) {
-
-body {
-font-size: (@font-size + 8) / @em;
-}
-
-}
-
-@media screen and (min-width: 4440px) {
-
-body {
-position: relative;
-max-width: 5120px;
-}
-
-#masthead, #content, #colophon .inner {
-margin-left: @column*7;
-margin-right: @column*7;
-}
-
-#quarter div.wrapper {
-width: 25%;
-}
-#quarter div p {
-.normal();
-}
-
-#third div.wrapper {
-width: 33%;
-}
-#third div p {
-.normal();
-}
-
-#halve div.wrapper {
-width: 50%;
-}
-#third div p {
-.normal();
-}
-
-}
