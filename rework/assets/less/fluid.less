@@ -63,7 +63,7 @@ border: 0;
   Note: box-sizing will not work in IE6-8
 */
 
-.wrapper, .wrapper2c1, .wrapper2c2 {
+.wrapper, .wrapper2c1, .wrapper2c2, .wrapperfull {
 padding: 0 (@line/2)/@em;
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
@@ -139,7 +139,7 @@ article p:last-child {
 margin-bottom: 0;
 }
 
-#content header p, #content div {
+#content header p{
 padding-bottom: 23/@em;
 border-bottom: 1/@em dotted @body;
 margin: 0;
@@ -233,7 +233,7 @@ color: @body;
 margin: 0 @column;
 }
 
-.wrapper, .wrapper2c1, .wrapper2c2 {
+.wrapper, .wrapper2c1, .wrapper2c2, .wrapperfull {
 position: relative;	
 }
 
@@ -712,6 +712,11 @@ width: @2c1;
 width: @2c2;
 }
 
+#full div.wrapperfull {
+width: @wrapperfull;
+}
+
+
 #guide {
 float: left;
 }
@@ -795,6 +800,10 @@ width: @2c1;
 }
 #halve div.wrapper2c2 {
 width: @2c2;
+}
+
+#full div.wrapperfull {
+width: @wrapperfull;
 }
 
 
@@ -892,6 +901,11 @@ margin-right: @column*2;
 .normal();
 }
 
+#full div.wrapperfull {
+width: @wrapperfull;
+}
+
+
 #quarter div.wrapper {
 }
 #quarter div p {
@@ -939,5 +953,11 @@ width: 50%;
 #halve div p {
 .small();
 }
+
+#full div.wrapperfull {
+width: @wrapperfull;
+}
+
+
 }
 
