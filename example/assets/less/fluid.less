@@ -11,12 +11,20 @@
 */
 
 @import 'helpful-LESS-functions.less';
+
 @import 'custom.less';
+
+
 
 /*
   Margin, padding, and border resets
   except for form elements
 */
+
+body, #guide {
+
+width: 100%;
+}
 
 body,div,
 h1,h2,h3,h4,h5,h6,p,blockquote,pre,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,th,td,article,aside,figure,footer,header,hgroup,menu,nav,section {
@@ -24,6 +32,12 @@ margin: 0;
 padding: 0;
 border: 0;
 }
+h1,h2,h3,h4,h5,h6,a,p {
+z-indez:1000;
+}
+
+// see Troubleshooting.less to toggle options
+@import 'troubleshooting.less';
 
 
 /*
@@ -54,13 +68,17 @@ border: 0;
   Note: box-sizing will not work in IE6-8
 */
 
-.wrapper {
+.wrapper, #guide {
 padding: 0 (@line/2)/@em;
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
 -o-box-sizing: border-box;
 -ms-box-sizing: border-box;
 box-sizing: border-box;
+}
+
+.wrapper4c1, .wrapper4c2, .wrapper4c3, .wrapper4c4, .wrapper3c1, .wrapper3c2, .wrapper3c3, .wrapper2c1, .wrapper2c2, .wrapperfull {
+float: left;
 }
 
 /*
@@ -96,7 +114,7 @@ line-height: (@line*2) / 42 * 1em; // 48 px
 .massive {
 font-size: (@font-size * 3) / @em; // 68px
 line-height: (@line*3) / 68 * 1em; // 72 px
-}
+}	
 
 .gigantic {
 font-size: (@font-size * 4) / @em; // 110px
@@ -126,7 +144,7 @@ article p:last-child {
 margin-bottom: 0;
 }
 
-#content header p {
+#content header p{
 padding-bottom: 23/@em;
 border-bottom: 1/@em dotted @body;
 margin: 0;
@@ -140,7 +158,7 @@ h3 {
 margin: 48/@em 0 24/@em;
 }
 
-#download h3, #guide h3 {
+#quarter h3 {
 margin: 24/@em 0 0;
 }
 
@@ -220,8 +238,8 @@ color: @body;
 margin: 0 @column;
 }
 
-.wrapper {
-position: relative;
+.wrapper, .wrapper2c1, .wrapper2c2, .wrapperfull {
+position: relative;	
 }
 
 #masthead {
@@ -313,7 +331,7 @@ border-bottom: @border;
 padding-top: @content-width/@em;
 }
 
-#features figure {
+#half figure {
 width: 100%;
 height: 192/@em;
 }
@@ -567,16 +585,20 @@ h1 {
 .large();
 }
 
-#download h3 {
+#quarter h3 {
 float: left;
 margin: 0;
 clear: left;
 width: (@font-size*(@multiplier * 5))/@em;
 }
 
-#download div p {
-padding-left: 115/@em;
+#quarter div p {
 margin-top: 24/@em;
+padding:1px;
+}
+
+#quarter div p  {
+padding-left: 115/@em;
 }
 
 }
@@ -635,22 +657,33 @@ padding-bottom: 23/26*1em;
 border-bottom: 1/26*1em dotted @body;
 }
 
-#features section.wrapper {
+#half section.wrapper {
 width: 50%;
 }
 
-#features section.wrapper:nth-of-type(2n) {
+
+#col1  {
+width: @3c1;
+}
+#col2  {
+width: @3c2;
+}
+#col3  {
+width: @3c3;
+}
+
+#half section.wrapper:nth-of-type(2n) {
 margin-left: 50%;
 }
 
-#features figure {
+#half figure {
 width: 100%;
 height: 100%;
 position: absolute;
 top: 0; right: -100%;
 }
 
-#features section.wrapper:nth-of-type(2n) figure {
+#half section.wrapper:nth-of-type(2n) figure {
 right: auto; left: -100%;
 }
 
@@ -658,21 +691,53 @@ right: auto; left: -100%;
 margin: 0 12/@em;
 }
 
-#download div.wrapper {
-float: left;
-width: 25%;
-}
-
-#download h3 {
+#quarter h3 {
 float: none;
 clear: none;
 width: auto;
 margin: 24/@em 0 24/@em;
 }
 
-#download div p {
+#quarter div.wrapper4c1 {
+width: @4c1;
+}
+#quarter div.wrapper4c2 {
+width: @4c2;
+}
+#quarter div.wrapper4c3 {
+width: @4c3;
+}
+#quarter div.wrapper4c4 {
+width: @4c4;
+}
+
+#third div.wrapper3c1 {
+width: @3c1;
+}
+
+#third div.wrapper3c2 {
+width: @3c2;
+}
+
+#third div.wrapper3c3 {
+width: @3c3;
+}
+
+#quarter div p, #third div p {
 padding: 0;
 }
+
+#halve div.wrapper2c1 {
+width: @2c1;
+}
+#halve div.wrapper2c2 {
+width: @2c2;
+}
+
+#full div.wrapperfull {
+width: @wrapperfull;
+}
+
 
 #guide {
 float: left;
@@ -719,13 +784,50 @@ margin-left: @column*3;
 margin-right: @column*3;
 }
 
-#download div.wrapper {
-width: 25%;
+
+#quarter div.wrapper4c1 {
+width: @4c1;
+float: left;
+}
+#quarter div.wrapper4c2 {
+width: @4c2;
+float: left;
+}
+#quarter div.wrapper4c3 {
+width: @4c3;
+float: left;
+}
+#quarter div.wrapper4c4 {
+width: @4c4;
+float: left;
 }
 
-#download div p {
+
+#third div.wrapper3c1 {
+width: @3c1;
+}
+#third div.wrapper3c2 {
+width: @3c3;
+}
+#third div.wrapper3c3 {
+width: @3c3;
+}
+
+#quarter div p, #third div p {
 .small();
 }
+
+#halve div.wrapper2c1 {
+width: @2c1;
+}
+#halve div.wrapper2c2 {
+width: @2c2;
+}
+
+#full div.wrapperfull {
+width: @wrapperfull;
+}
+
 
 }
 
@@ -742,6 +844,7 @@ font-size: (@font-size + 1) / @em;
 }
 
 }
+
 
 
 /*
@@ -761,6 +864,9 @@ margin-left: @column*2;
 margin-right: @column*2;
 }
 
+body {
+font-size: (@font-size + 5) / @em;
+}
 
 #masthead {
 padding: 72/@em 0 48/@em;
@@ -778,15 +884,11 @@ margin-bottom: 12 / 42*1em;
 .huge();
 }
 
-#download div.wrapper {
-width: 25%;
-}
-
 #guides {
 height: (@guide*(@multiplier * 1.75))/@em;
 }
 
-#features header {
+#halve header {
 padding-top: 48/@em;
 }
 
@@ -794,20 +896,47 @@ padding-top: 48/@em;
 
 @media screen and (min-width: 130em) {
 
+body {
+font-size: (@font-size + 6) / @em;
+}
+
 #masthead, #content, #colophon .inner {
 margin-left: @column*2;
 margin-right: @column*2;
 }
 
-#download div.wrapper {
-width: 25%;
+#quarter div.wrapper4c1, #quarter div.wrapper4c2, #quarter div.wrapper4c3, #quarter div.wrapper4c4 {
 }
-#download div p {
+#quarter div p {
 .normal();
 }
 
+#third div.wrapper3c1, #third div.wrapper3c2, #third div.wrapper3c3 {
+}
+#third div p {
+.normal();
 }
 
+#halve div.wrapper2c1 {
+}
+#halve div p {
+.normal();
+}
+
+#halve div.wrapper2c2 {
+}
+#halve div p {
+.normal();
+}
+
+#full div.wrapperfull {
+width: @wrapperfull;
+}
+
+#quarter div p {
+.normal();
+}
+}
 
 /*
 *
@@ -817,7 +946,7 @@ width: 25%;
 @media screen and (min-width: 2496px) {
 
 body {
-font-size: (@font-size + 3) / @em;
+font-size: (@font-size + 7) / @em;
 }
 
 }
@@ -829,46 +958,49 @@ margin-left: @column*2;
 margin-right: @column*2;
 }
 
-#download div.wrapper {
-width: 25%%;
+#quarter div.wrapper4c1 {
+width: @4c1;
 }
-#download div p {
+#quarter div.wrapper4c2 {
+width: @4c2;
+}
+#quarter div.wrapper4c3 {
+width: @4c3;
+}
+#quarter div.wrapper4c4 {
+width: @4c4;
+}
+
+#quarter div p {
 .small();
 }
 
+#third div.wrapper3c1 {
+width: @3c1;
+}
+#third div.wrapper3c2 {
+width: @3c2;
+}
+#third div.wrapper3c3 {
+width: @3c3;
 }
 
-/*
-*
-* Zoom baseline grid to 19/16 = 1.1875
-*
-*/
-
-@media screen and (min-width: 4104px) {
-
-body {
-font-size: (@font-size + 3) / @em;
+#third div p {
+.small();
 }
 
+#halve div.wrapper2c1 {
+width: @2c1;
+}
+#halve div.wrapper2c2 {
+width: @2c2;
+}
+#halve div p {
+.small();
 }
 
-@media screen and (min-width: 4440px) {
-
-body {
-position: relative;
-max-width: 5120px;
+#full div.wrapperfull {
+width: @wrapperfull;
+}
 }
 
-#masthead, #content, #colophon .inner {
-margin-left: @column*7;
-margin-right: @column*7;
-}
-
-#download div.wrapper {
-width: 25%;
-}
-#download div p {
-.normal();
-}
-
-}

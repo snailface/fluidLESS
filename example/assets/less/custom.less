@@ -8,15 +8,40 @@
 //
 // System Varibles
 //
-@line: 24;
-@column: 100% / 18;
-@font-size: 18;
-@em: @font-size*1em;
+@line: 24; // default 24
+@column: 100% / 18; // default 100% / 24
+@font-size: 18; // default 18
+@em: @font-size*1em; // default @font-size*1em
 @base-width: 40em; // default 40
 @width-var: 10em; //default 10
 @content-width: 50; //default 50
 @multiplier: 1; //default 1
-@guide: 292;
+@guide: 292; // default 292
+
+//
+// Dynamic Columns - All systems must equal 100% or less
+//
+
+// Full
+@wrapperfull: 100%;
+
+// 2 Columns
+
+@2c1: 50%;
+@2c2: 50%;
+
+// 3 Columns
+
+@3c1: 33%;
+@3c2: 34%;
+@3c3: 33%;
+
+// 4 Columns
+
+@4c1: 25%;
+@4c2: 25%;
+@4c3: 25%;
+@4c4: 24%;
 
 //
 //AI / Math Logic
