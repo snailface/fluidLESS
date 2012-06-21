@@ -21,6 +21,11 @@
   except for form elements
 */
 
+body, #guide {
+
+width: 100%;
+}
+
 body,div,
 h1,h2,h3,h4,h5,h6,p,blockquote,pre,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,th,td,article,aside,figure,footer,header,hgroup,menu,nav,section {
 margin: 0;
@@ -63,7 +68,7 @@ border: 0;
   Note: box-sizing will not work in IE6-8
 */
 
-.wrapper, .wrapper2c1, .wrapper2c2, .wrapperfull {
+.wrapper, #guide {
 padding: 0 (@line/2)/@em;
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
@@ -72,7 +77,7 @@ padding: 0 (@line/2)/@em;
 box-sizing: border-box;
 }
 
-.wrapper2c1, .wrapper2c2 {
+.wrapper4c1, .wrapper4c2, .wrapper4c3, .wrapper4c4, .wrapper3c1, .wrapper3c2, .wrapper3c3, .wrapper2c1, .wrapper2c2, .wrapperfull {
 float: left;
 }
 
@@ -693,12 +698,29 @@ width: auto;
 margin: 24/@em 0 24/@em;
 }
 
-#quarter div.wrapper {
-width: 25%;
+#quarter div.wrapper4c1 {
+width: @4c1;
+}
+#quarter div.wrapper4c2 {
+width: @4c2;
+}
+#quarter div.wrapper4c3 {
+width: @4c3;
+}
+#quarter div.wrapper4c4 {
+width: @4c4;
 }
 
-#third div.wrapper {
-width: 33%;
+#third div.wrapper3c1 {
+width: @3c1;
+}
+
+#third div.wrapper3c2 {
+width: @3c2;
+}
+
+#third div.wrapper3c3 {
+width: @3c3;
 }
 
 #quarter div p, #third div p {
@@ -762,12 +784,7 @@ margin-left: @column*3;
 margin-right: @column*3;
 }
 
-#quarter div.wrapper {
-width: @4c1;
-float: left;
-}
 
-/*
 #quarter div.wrapper4c1 {
 width: @4c1;
 float: left;
@@ -784,11 +801,16 @@ float: left;
 width: @4c4;
 float: left;
 }
-*/
 
-#third div.wrapper {
 
-width: 33%;
+#third div.wrapper3c1 {
+width: @3c1;
+}
+#third div.wrapper3c2 {
+width: @3c3;
+}
+#third div.wrapper3c3 {
+width: @3c3;
 }
 
 #quarter div p, #third div p {
@@ -883,7 +905,13 @@ margin-left: @column*2;
 margin-right: @column*2;
 }
 
-#third div.wrapper {
+#quarter div.wrapper4c1, #quarter div.wrapper4c2, #quarter div.wrapper4c3, #quarter div.wrapper4c4 {
+}
+#quarter div p {
+.normal();
+}
+
+#third div.wrapper3c1, #third div.wrapper3c2, #third div.wrapper3c3 {
 }
 #third div p {
 .normal();
@@ -905,9 +933,6 @@ margin-right: @column*2;
 width: @wrapperfull;
 }
 
-
-#quarter div.wrapper {
-}
 #quarter div p {
 .normal();
 }
@@ -933,22 +958,42 @@ margin-left: @column*2;
 margin-right: @column*2;
 }
 
-#quarter div.wrapper {
-width: 25%;
+#quarter div.wrapper4c1 {
+width: @4c1;
 }
+#quarter div.wrapper4c2 {
+width: @4c2;
+}
+#quarter div.wrapper4c3 {
+width: @4c3;
+}
+#quarter div.wrapper4c4 {
+width: @4c4;
+}
+
 #quarter div p {
 .small();
 }
 
-#third div.wrapper {
-width: 33%;
+#third div.wrapper3c1 {
+width: @3c1;
 }
+#third div.wrapper3c2 {
+width: @3c2;
+}
+#third div.wrapper3c3 {
+width: @3c3;
+}
+
 #third div p {
 .small();
 }
 
-#halve div.wrapper {
-width: 50%;
+#halve div.wrapper2c1 {
+width: @2c1;
+}
+#halve div.wrapper2c2 {
+width: @2c2;
 }
 #halve div p {
 .small();
@@ -957,7 +1002,5 @@ width: 50%;
 #full div.wrapperfull {
 width: @wrapperfull;
 }
-
-
 }
 
