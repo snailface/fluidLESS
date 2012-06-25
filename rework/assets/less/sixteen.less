@@ -1,0 +1,158 @@
+
+
+/*
+*
+* Sixteen-column grid active
+* ----------------------------------------------------------------------------------------------------------------------
+* Margin | # 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 | Margin
+* 5.55555% | % 6.25 12.5 18.75 25.0 31.25 37.5 43.75 50.0 56.25 62.5 68.75 75.0 81.25 87.5 93.75 100 | 5.55555%
+*
+*
+*/
+
+@media screen and (min-width: @width-hd) {
+
+#masthead, #content, #colophon .inner {
+margin-left: @column*2;
+margin-right: @column*2;
+}
+
+body {
+font-size: (@font-size + 5) / @em;
+}
+
+#masthead {
+padding: 72/@em 0 48/@em;
+}
+
+h1 {
+.massive();
+}
+h2 {
+.massive();
+margin-bottom: 12 / 42*1em;
+}
+
+#masthead p {
+.huge();
+}
+
+#guides {
+height: (@guide*(@multiplier * 1.75))/@em;
+}
+
+#halve header {
+padding-top: 48/@em;
+}
+
+}
+
+@media screen and (min-width: 130em) {
+
+body {
+font-size: (@font-size + 6) / @em;
+}
+
+#masthead, #content, #colophon .inner {
+margin-left: @column*2;
+margin-right: @column*2;
+}
+
+#quarter div.wrapper4c1, #quarter div.wrapper4c2, #quarter div.wrapper4c3, #quarter div.wrapper4c4 {
+}
+#quarter div p {
+.normal();
+}
+
+#third div.wrapper3c1, #third div.wrapper3c2, #third div.wrapper3c3 {
+}
+#third div p {
+.normal();
+}
+
+#halve div.wrapper2c1 {
+}
+#halve div p {
+.normal();
+}
+
+#halve div.wrapper2c2 {
+}
+#halve div p {
+.normal();
+}
+
+#full div.wrapperfull {
+width: @wrapperfull;
+}
+
+#quarter div p {
+.normal();
+}
+}
+
+/*
+*
+* Zoom baseline grid to 18/16 = 1.125
+*
+*/
+@media screen and (min-width: 2496px) {
+
+body {
+font-size: (@font-size + 7) / @em;
+}
+
+}
+
+@media screen and (min-width: 3216px) {
+
+#masthead, #content, #colophon .inner {
+margin-left: @column*2;
+margin-right: @column*2;
+}
+
+#quarter div.wrapper4c1 {
+width: @4c1;
+}
+#quarter div.wrapper4c2 {
+width: @4c2;
+}
+#quarter div.wrapper4c3 {
+width: @4c3;
+}
+#quarter div.wrapper4c4 {
+width: @4c4;
+}
+
+#quarter div p {
+.small();
+}
+
+#third div.wrapper3c1 {
+width: @3c1;
+}
+#third div.wrapper3c2 {
+width: @3c2;
+}
+#third div.wrapper3c3 {
+width: @3c3;
+}
+
+#third div p {
+.small();
+}
+
+#halve div.wrapper2c1 {
+width: @2c1;
+}
+#halve div.wrapper2c2 {
+width: @2c2;
+}
+#halve div p {
+.small();
+}
+
+#full div.wrapperfull {
+width: @wrapperfull;
+}
+}
