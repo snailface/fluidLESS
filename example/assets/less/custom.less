@@ -17,12 +17,14 @@
 @content-width: 50; //default 50
 @multiplier: 1; //default 1
 @guide: 292; // default 292
+@padding-end: 150px; // padding on end of page
 
 //
 // Dynamic Columns - All systems must equal 100% or less
 //
 
 // Full
+
 @wrapperfull: 100%;
 
 // 2 Columns
@@ -33,7 +35,7 @@
 // 3 Columns
 
 @3c1: 33%;
-@3c2: 34%;
+@3c2: 33%;
 @3c3: 33%;
 
 // 4 Columns
@@ -41,14 +43,14 @@
 @4c1: 25%;
 @4c2: 25%;
 @4c3: 25%;
-@4c4: 24%;
+@4c4: 23%;
 
 //
 //AI / Math Logic
 //
 
 @width-8: @base-width + (@width-var * 0.65);
-@width-16: @base-width + (@width-var * 1.5);
+@width-mobile: @base-width + (@width-var * 1.5);
 @width-tablet: @base-width + (@width-var * 2.15);
 @width-small: @base-width + (@width-var * 3.5);
 @width-medium: @base-width + (@width-var * 4.7);
