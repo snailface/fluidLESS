@@ -25,6 +25,7 @@
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+
 		<link rel="shortcut icon" href="assets/images/favicon.png"/>
 		<link rel="apple-touch-icon" sizes="114x114" href="assets/images/icon.png"/>
 		
@@ -281,14 +282,12 @@
 		
 	<script type="text/javascript">
 		$("#content").fitVids();
-	</script> 	
-            <script type="text/javascript">
-        	Hyphenator.config({
-        		displaytogglebox : true,
-        		minwordlength : 4
-        	});
-        	Hyphenator.run();
-        </script>		
+	</script> 
+    <script type="text/javascript">
+			    Hyphenator.setClassName('p'),
+        		Hyphenator.setMinWordLength(4);
+        		Hyphenator.run();
+    </script>			
 	</body>
 	
 </html>
