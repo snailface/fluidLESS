@@ -1,4 +1,4 @@
-# fluidLESS Framework - Beta 1.1
+# fluidLESS Framework - Beta 1.2
 
 Is a fluid-width grid system composed out of 18 even columns utilizing LESS. Based on Joni Korpi's [Golden Grid System](https://github.com/jonikorpi/Golden-Grid-System).
 
@@ -8,7 +8,6 @@ Is a fluid-width grid system composed out of 18 even columns utilizing LESS. Bas
 
 - **/example** contains the source of the latest release of the fluidLESS framework.
 - **/rework** contains the source of bleeding edge fluidLESS framework.
-- **index.html** contains the required markup (namely the meta viewport tag) in a simple layout.
 - **barebones.html** contains the required markup (namely the meta viewport tag) in a skeleton layout.
 - **fluid.less** is the [LESS](http://lesscss.org/) stylesheet minus the variables. It offers customization for users wishing to utalize LESS. Within fluid.less is also many sub-files to make it easier to understand the layout.
 - **settings.less** is the [LESS](http://lesscss.org/) variables for fluidLESS.

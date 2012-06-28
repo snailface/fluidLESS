@@ -5,80 +5,11 @@
 *	
 */
 
-//
-// System Varibles
-//
-@line: 24; // default 24
-@column: 100% / 18; // default 100% / 24
-@font-size: 18; // default 18
-@em: @font-size*1em; // default @font-size*1em
-@base-width: 40em; // default 40
-@width-var: 10em; //default 10
-@content-width: 50; //default 50
-@multiplier: 1; //default 1
-@guide: 292; // default 292
-@padding-end: 150px; // padding on end of page
+
 
 //
-// Dynamic Columns - All systems must equal 100% or less
+// Add your own LESS/CSS here to flavour the framework to your liking
 //
 
-// Full
+p {padding: 10px;} 
 
-@wrapperfull: 100%;
-
-// 2 Columns
-
-@2c1: 30%;
-@2c2: 70%;
-
-// 3 Columns
-
-@3c1: 33%;
-@3c2: 33%;
-@3c3: 33%;
-
-// 4 Columns
-
-@4c1: 25%;
-@4c2: 25%;
-@4c3: 25%;
-@4c4: 23%;
-
-//
-//AI / Math Logic
-//
-
-@width-8: @base-width + (@width-var * 0.65);
-@width-mobile: @base-width + (@width-var * 1.5);
-@width-tablet: @base-width + (@width-var * 2.15);
-@width-small: @base-width + (@width-var * 3.5);
-@width-medium: @base-width + (@width-var * 4.7);
-@width-large: @base-width + (@width-var * 6);
-@width-hd: @base-width + (@width-var * 8);
-
-//
-// Colors
-//
-
-@background: 	#FAFAFA;
-
-@body-bg: 		#fff;
-@border:		2px solid #333333;
-
-@body: 			rgb(61,60,56);
-@emphasis:		rgb(23,20,9);
-@aside:			rgb(158,156,149);
-@content-frame  #000;
-
-@primary:		rgb(45,171,254);
-@secoundary:	#123;
-
-@link:			lighten(@primary, 10%);
-@main-color: 	darken(@primary, 10%);
-
-//
-// Fonts
-//
-@master-fonts: ff-dagny-web-pro, sans-serif;
-@code-fonts: Menlo, Monaco, monospace;
