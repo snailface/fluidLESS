@@ -39,10 +39,7 @@
   
     return this.each(function(){
       var selectors = [
-        "iframe[src^='http://player.vimeo.com']", 
-        "iframe[src^='http://www.youtube.com']", 
-        "iframe[src^='http://www.kickstarter.com']",
-		"iframe[src^='https://na3.salesforce.com']",
+        "iframe", 
         "object", 
         "embed"
       ];
