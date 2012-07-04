@@ -1,4 +1,4 @@
-# fluidLESS Framework - Beta 1.2
+# fluidLESS Framework - Beta 1.3
 
 Is a fluid-width grid system composed out of 18 even columns utilizing LESS. Based on Joni Korpi's [Golden Grid System](https://github.com/jonikorpi/Golden-Grid-System).
 
