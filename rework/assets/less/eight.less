@@ -7,6 +7,9 @@
 *
 *
 */
+// Dynamic resize iframe fix
+#quarter div.wrapper4c1,#quarter div.wrapper4c2,#quarter div.wrapper4c3,#quarter div.wrapper4c4,#third div.wrapper3c1,#third div.wrapper3c2,#third div.wrapper3c3,#halve div.wrapper2c1,#halve div.wrapper2c2,#full div.wrapperful {width:100%;}
+
 
 /*
 *
@@ -14,12 +17,6 @@
 *
 */
 
-#quarter div.wrapper4c1,#quarter div.wrapper4c2,#quarter div.wrapper4c3,#quarter div.wrapper4c4,#third div.wrapper3c1,#third div.wrapper3c2,#third div.wrapper3c3,#halve div.wrapper2c1,#halve div.wrapper2c2,#full div.wrapperful    {
-width: 100%;
-padding: @padding;
-margin: @padding;
-text-align:justify;
-}
 
 @media screen and (min-width: @width-mobile) {
 
@@ -36,6 +33,13 @@ font-size: (@font-size + 1) / @em;
 
 @media screen and (min-width: @width-tablet) {
 
+// Global section margins & padding
+#quarter div.wrapper4c1,#quarter div.wrapper4c2,#quarter div.wrapper4c3,#quarter div.wrapper4c4,#third div.wrapper3c1,#third div.wrapper3c2,#third div.wrapper3c3,#halve div.wrapper2c1,#halve div.wrapper2c2,#full div.wrapperful {
+padding: @padding;
+margin: @padding;
+text-align:justify;
+}
+
 body {
 font-size: (@font-size) / @em;
 }
@@ -47,10 +51,6 @@ margin: 0 @column;
 #guides {
 height: (@guide*(@multiplier * 1.5))/@em;
 }
-
-// Dynamic resize iframe fix
-
-
 
 #content {
 margin-bottom: 72/@em;
@@ -74,7 +74,6 @@ border-bottom: 1/26*1em dotted @body;
 #half section.wrapper {
 width: 50%;
 }
-
 
 #col1  {
 width: @3c1;
