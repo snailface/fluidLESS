@@ -12,8 +12,9 @@ background: @background;
 color: @body;
 }
 
-#masthead, #content, .inner {
-margin: 0 @column;
+#masthead, #content, #colophon .inner {
+margin-left: @column*0;
+margin-right: @column*0;
 }
 
 .wrapper, .wrapper2c1, .wrapper2c2, .wrapperfull {
@@ -29,12 +30,6 @@ padding: 36/@em 0 24/@em;
 height: (@guide*(@multiplier * 0.5))/@em;
 position: relative;
 background: @emphasis;
-}
-
-// Dynamic resize iframe fix
-
-#quarter div.wrapper4c1,#quarter div.wrapper4c2,#quarter div.wrapper4c3,#quarter div.wrapper4c4,#third div.wrapper3c1,#third div.wrapper3c2,#third div.wrapper3c3,#halve div.wrapper2c1,#halve div.wrapper2c2,#full div.wrapperful    {
-width: 100%;
 }
 
 #full div.wrapperfull {

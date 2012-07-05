@@ -35,17 +35,16 @@ font-size: (@font-size + 1) / @em;
 
 // Global section margins & padding
 #quarter div.wrapper4c1,#quarter div.wrapper4c2,#quarter div.wrapper4c3,#quarter div.wrapper4c4,#third div.wrapper3c1,#third div.wrapper3c2,#third div.wrapper3c3,#halve div.wrapper2c1,#halve div.wrapper2c2,#full div.wrapperful {
-padding: @padding;
-margin: @padding;
-text-align:justify;
-}
+margin-left: @content-margin;
+margin-right: @content-margin}
 
 body {
 font-size: (@font-size) / @em;
 }
 
-#masthead, #content, .inner {
-margin: 0 @column;
+#masthead, #content, #colophon .inner {
+margin-left: @column*1;
+margin-right: @column*1;
 }
 
 #guides {
@@ -185,7 +184,7 @@ body {
 font-size: (@font-size) / @em;
 }
 
-#masthead, #content, .inner {
+#masthead, .inner {
 margin-left: @column*3;
 margin-right: @column*3;
 }
