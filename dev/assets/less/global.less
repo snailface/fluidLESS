@@ -1,0 +1,203 @@
+/*
+  Consistency fixes adopted from http://necolas.github.com/normalize.css/
+*/
+
+html {height: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}body {min-height: 100%; font-size: 100%;}article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, audio, canvas, video{display: block;}sub, sup {font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}sup {top: -0.5em;}sub {bottom: -0.25em;}pre {white-space: pre;white-space: pre-wrap; word-wrap: break-word;}b, strong{font-weight: bold;}abbr[title] {border-bottom: 1px dotted;}input, textarea, button, select {margin: 0;font-size: 100%;line-height: normal;vertical-align: baseline;}button,html input[type="button"], input[type="reset"], input[type="submit"] {cursor: pointer;-webkit-appearance: button;}input[type="checkbox"],input[type="radio"] {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-o-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}textarea {overflow: auto;}table {border-collapse: collapse;border-spacing: 0;}
+
+/*
+  Simple fluid media
+*/
+
+figure {
+position: relative;
+}
+figure img, figure object, figure embed, figure video {
+max-width: 100%;
+display: block;
+}
+img {
+border: 0;
+-ms-interpolation-mode: bicubic;
+}
+
+ul, ol {
+	list-style-type: disc;
+	list-style-image: url(bullet.gif);
+	list-style-position: inside;
+	margin-left: @ul-margin;
+	}
+
+
+/*
+  Simple elastic gutters
+  Note: box-sizing will not work in IE6-8
+*/
+
+.wrapper, #article, #guide {
+padding: 0 (@line/2)/@em;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-o-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+padding-bottom: 5px;
+}
+
+/*
+Zoomable baseline grid
+type size presets
+*/
+
+body {
+font-size: @font-size / 16 * 1em; // 16px
+line-height: @line / @em; // 24 px
+}
+
+.small, small, code, #copyright p {
+font-size: (@font-size*0.8125) / @em; // 13px
+line-height: (@line*0.75) / (@font-size*0.8125) * 1em; // 18px
+}
+
+.normal, h4, h3 {
+font-size: @font-size / @em; // 16px
+line-height: @line / @em; // 24px
+}
+
+.large, h2, h1 {
+font-size: (@font-size * 1.23) / @em; // 26px
+line-height: (@line*1.5) / 26 * 1em; // 36 px
+}
+
+.huge {
+font-size: (@font-size * 2) / @em; // 42px
+line-height: (@line*2) / 42 * 1em; // 48 px
+}
+
+.massive {
+font-size: (@font-size * 3) / @em; // 68px
+line-height: (@line*3) / 68 * 1em; // 72 px
+}	
+
+.gigantic {
+font-size: (@font-size * 4) / @em; // 110px
+line-height: (@line*5) / 110 * 1em; // 120 px
+}
+
+/*
+Typography
+*/
+
+body, input, textarea, button, select {
+font-family: @master-fonts;
+}
+
+pre, code {
+font-family: @code-fonts;
+}
+
+article p, #content figure, #content header p {
+margin-bottom: 24/@em;
+-webkit-hyphens: auto;
+-moz-hyphens: auto;
+hyphens: auto;
+}
+
+article p:last-child {
+margin-bottom: 0;
+}
+
+#content header p{
+padding-bottom: 23/@em;
+border-bottom: 1/@em dotted @body;
+margin: 0;
+}
+
+h2 {
+margin-bottom: 12 / 26*1em;
+}
+
+h3 {
+margin: 48/@em 0 24/@em;
+}
+
+#quarter h3, #third h3, #halve h3, #full h3 {
+margin: 24/@em 0 0;
+}
+
+#colophon h3 {
+border-bottom: 1/@em dotted @aside;
+margin: 0 0 11/@em;
+}
+
+/*
+Colors
+*/
+
+h1, h2, h3, strong, code {
+color: @emphasis;
+}
+
+#colophon {
+color: @aside;
+}
+
+#follow p, #colophon h3 {
+color: @background;
+}
+
+a {
+text-decoration: none;
+color: @emphasis;
+border-bottom: 2/@em solid @link;
+}
+
+// KendoUI fix - creates lag though
+
+#grid a {
+text-decoration: default;
+color: default;
+border-bottom: none;
+}
+
+#colophon a {
+color: @link;
+border-bottom-color: transparent;
+}
+
+a:hover {
+border-bottom-color: @emphasis;
+}
+
+#colophon a:hover {
+border-bottom-color: @link;
+}
+
+a:active {
+border-bottom-color: @link;
+color: @link;
+}
+
+#colophon a:active {
+border-bottom-color: @background;
+color: @background;
+}
+
+::selection {background: @link; color: @emphasis;}
+::-moz-selection {background: @link; color: @emphasis;}
+img::selection {background: transparent;}
+img::-moz-selection {background: transparent;}
+body {-webkit-tap-highlight-color: @link;}
+
+// Clean content
+
+#content {
+overflow: hidden;
+padding-bottom: 15px;
+}
+
+#content article, #content section div {
+float: left;
+}
+
+
+

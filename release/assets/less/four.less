@@ -1,0 +1,329 @@
+/*
+*
+* Four-column grid active
+* ----------------------------------------
+* Margin | # 1 2 3 4 | Margin
+* 5.55555% | % 25 50 75 100 | 5.55555%
+*
+*/
+
+body {
+background: @background;
+color: @body;
+}
+
+#masthead, #content, #colophon .inner {
+margin-left: @column*0;
+margin-right: @column*0;
+}
+
+.wrapper, .wrapper2c1, .wrapper2c2, .wrapperfull {
+position: relative;	
+}
+
+#masthead {
+clear: both;
+padding: 36/@em 0 24/@em;
+}
+
+#guides {
+height: (@guide*(@multiplier * 0.5))/@em;
+position: relative;
+background: @emphasis;
+}
+
+#full div.wrapperfull {
+width: @wrapperfull;
+}
+
+.fluid-site-guide {
+height: 100%;
+position:absolute;
+top:0;
+z-index:9000;
+margin-left:-0.75em;
+border:solid @main-color;
+background: @main-color;
+border-width:0 0.75em;
+-webkit-transition: all 0.618s ease-out;
+-moz-transition: all 0.618s ease-out;
+-ms-transition: all 0.618s ease-out;
+-o-transition: all 0.618s ease-out;
+transition: all 0.618s ease-out;
+}
+
+.fluid-site-guide div{
+background: @emphasis;
+width:2px;
+height:100%;
+position:absolute;
+left:-1px;top:0;
+}
+
+.fluid-site-0{left:0;}
+.fluid-site-1{left:11.11111111111111%;}
+.fluid-site-2{left:16.666666666666664%;}
+.fluid-site-3{left:22.22222222222222%;}
+.fluid-site-4{left:27.77777777777778%;}
+.fluid-site-5{left:33.33333333333333%;}
+.fluid-site-6{left:38.888888888888886%;}
+.fluid-site-7{left:44.44444444444444%;}
+.fluid-site-8{left:50%;}
+.fluid-site-9{left:55.55555555555556%;}
+.fluid-site-10{left:61.11111111111111%;}
+.fluid-site-11{left:66.66666666666666%;}
+.fluid-site-12{left:72.22222222222221%;}
+.fluid-site-13{left:77.77777777777777%;}
+.fluid-site-14{left:83.33333333333333%;}
+.fluid-site-15{left:88.88888888888889%;}
+.fluid-site-16{right:0;}
+
+.fluid-site-0,.fluid-site-16{width:5.555555555555555%;padding-right:0.75em;border:0;margin:0;}
+.fluid-site-0 div{left:auto;right:0.75em;}
+.fluid-site-16 div{left:0.75em;}
+
+@media screen and (max-width: 719px){
+.fluid-site-2,.fluid-site-6,.fluid-site-10,.fluid-site-14{
+-webkit-transform: scale(0, 1);
+-moz-transform: scale(0, 1);
+-ms-transform: scale(0, 1);
+-o-transform: scale(0, 1);
+transform: scale(0, 1);
+}
+}
+
+@media screen and (max-width: 1871px){
+.fluid-site-1,.fluid-site-3,.fluid-site-5,.fluid-site-7,.fluid-site-9,.fluid-site-11,.fluid-site-13,.fluid-site-15{
+-webkit-transform: scale(0, 1);
+-moz-transform: scale(0, 1);
+-ms-transform: scale(0, 1);
+-o-transform: scale(0, 1);
+transform: scale(0, 1);
+}
+}
+
+#content {
+margin-bottom: @content-width/@em;
+background: @body-bg;
+border-right: @border;
+border-left: @border;
+border-top: @border;
+border-bottom: @border;
+}
+
+#content header {
+padding-top: @content-width/@em;
+}
+
+#half figure {
+width: 100%;
+height: 192/@em;
+}
+
+.canvas {
+background: @emphasis;
+position: relative;
+height: 100%;
+overflow: hidden;
+}
+
+.gutter, .margin {
+height: 100%;
+width: 24/@em;
+background: @main-color;
+position: absolute;
+left: 25%; top: 0;
+margin-left: 12/@em*-1;
+}
+
+.gutter2 {
+left: 50%;
+}
+
+.gutter3 {
+left: 75%;
+}
+
+.gutter div {
+height: 100%;
+position: absolute;
+left: 50%; top: 0;
+margin-left: 1/@em*-1;
+width: 2/@em;
+background: @emphasis;
+}
+
+.margin {
+left: 0;
+margin: 0;
+width: 12/@em;
+}
+
+.right {
+left: auto; right: 0;
+}
+
+.line {
+height: 23/@em;
+border-bottom: 1/@em dotted @main-color;
+}
+
+.text {
+position: absolute;
+left: 12/@em; top: 24/@em;
+color: @main-color;
+white-space: pre;
+}
+
+.twoLines {
+font-size: 42/@em;
+line-height: 48/42*1em;
+left: 12/42*1em; top: 48/42*1em;
+}
+
+.threeLines {
+font-size: 68/@em;
+line-height: 72/68*1em;
+left: 12/68*1em; top: 96/68*1em;
+}
+
+.fourLines {
+font-size: 110/@em;
+line-height: 120/110*1em;
+left: 12/110*1em; top: 168/110*1em;
+}
+
+.fiveLines {
+font-size: 178/@em;
+line-height: 168/178*1em;
+left: 12/178*1em; top: 288/178*1em;
+}
+
+.switch {
+position: absolute;
+right: 24/@em; top: 24/@em;
+width: 24/@em;
+}
+
+.switchBar {
+height: 4/@em;
+margin-bottom: 4/@em;
+background: @main-color;
+}
+
+#folding .gutter1, #folding .gutter3 {
+background: none;
+border: dashed @main-color;
+border-width: 0 1/@em;
+width: 22/@em;
+}
+
+#gutters .canvas {
+background: @emphasis;
+}
+
+#gutters .gutter, #gutters .margin {
+background: @main-color;
+}
+
+#baseline .canvas {
+background: @emphasis;
+}
+
+#guide {
+clear: both;
+}
+
+#colophon {
+clear: both;
+padding: 24/@em 0 0;
+background: @emphasis;
+}
+
+#follow {
+margin-bottom: 24/@em;
+}
+
+#promoGroup .wrapper {
+margin-bottom: 24/@em;
+}
+
+#promoGroup p {
+padding-left: 84/@em;
+}
+
+#colophon img {
+width: 72/@em;
+height: 72/@em;
+float: left;
+.border-radius(3/@em);
+overflow: hidden;
+}
+
+#copyright {
+padding-bottom: 36/@em;
+}
+
+/*
+*
+* Fixes for IE6-8
+* http://jonikorpi.com/leaving-old-IE-behind/
+*
+*/
+
+.ie body {
+width: 640px;
+margin: 0 auto;
+border: solid @body;
+border-width: 0 1/@em;
+font-size: (@font-size + 1) / @em;
+}
+
+/*
+*
+* Zoom baseline grid to 17/16 = 1.0625
+*
+*/
+
+@media screen and (min-width: @base-width) {
+body {
+font-size: (@font-size + 1) / @em;
+}
+
+#guides {
+height: (@guide*(@multiplier * 0.71))/@em;
+}
+
+#colophon:after {
+content: " ";
+display: block;
+height: 0;
+visibility: hidden;
+clear: both;
+}
+
+#promoGroup {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-o-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+#promoGroup, #follow, #copyright {
+width: 50%;
+float: left;
+}
+
+#promoGroup {
+float: right;
+}
+
+#copyright p {
+.normal();
+}
+
+#promoGroup #promo, #copyright {
+margin-bottom: 48/@em;
+}
+}
