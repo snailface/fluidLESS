@@ -38,7 +38,7 @@
 		<header id="masthead"> 
 			<div class="wrapper" class="k-content">
 				<h1><hgroup>
-					fluidLESS
+					Lo-Fi Resistance
                 </hgroup>
 				</h1>
 				<p>
@@ -48,32 +48,31 @@
 
 
 			</div>
-            <nav role="navigation" id="level2" class="">
-    <div class="ym-wrapper">
-        <div class="ym-wbox">
-            <div class="ym-hlist">
-                <ul>
-                    <li class="active" style="display: block;"><a href="http://lofiresistance.com/lfr/index">Updates</a></li>
-                    <li style="display: block;"><a href="http://lofiresistance.com/lfr/biography">Biography</a></li>
-                    <li style="display: block;"><a href="http://lofiresistance.com/lfr/media">Media</a></li>
-                    <li style="display: block;"><a href="http://lofiresistance.com/lfr/live">Live</a></li>
-                    <li style="display: block;"><a href="http://lofiresistance.bandcamp.com">Store</a></li>
-                    <li style="display: block;"><a href="http://lofiresistance.com/lfr/links">Links</a></li>
-                <li style="display: none;"><label style="padding: 0 0.5em; color: rgba(255,255,255,.8)" for="ym-smnav">Navigation:</label> <select style="font-size: 16px;" id="ym-smnav"><option disabled="disabled" selected="selected" value="0">Go to ...</option><option data-target="http://lofiresistance.com/lfr/index">Updates</option><option data-target="http://lofiresistance.com/lfr/biography">Biography</option><option data-target="http://lofiresistance.com/lfr/media">Media</option><option data-target="http://lofiresistance.com/lfr/live">Live</option><option data-target="http://lofiresistance.bandcamp.com">Store</option><option data-target="http://lofiresistance.com/lfr/links">Links</option></select></li></ul>
-                
-                <form class="ym-searchform">
+<nav id="level2"  role="navigation">
+	<div class="ym-wrapper">
+		<div class="ym-wbox">
+			<div class="ym-hlist">
+				<ul>
+					<li {if '{embed:loc}' == 'Updates'} class="active" {if:else}{/if}><a href="http://lofiresistance.com/lfr/index">Updates</a></li>
+					<li {if '{embed:loc}' == 'Bio'} class="active" {if:else}{/if}><a href="http://lofiresistance.com/lfr/biography">Biography</a></li>
+					<li {if '{embed:loc}' == 'Media'} class="active" {if:else}{/if}><a href="http://lofiresistance.com/lfr/media">Media</a></li>
+					<li {if '{embed:loc}' == 'Live'} class="active" {if:else}{/if}><a href="http://lofiresistance.com/lfr/live">Live</a></li>
+					<li {if '{embed:loc}' == 'Store'} class="active" {if:else}{/if}><a href="http://lofiresistance.bandcamp.com">Store</a></li>
+					<li {if '{embed:loc}' == 'Links'} class="active" {if:else}{/if}><a href="http://lofiresistance.com/lfr/links">Links</a></li>
+				</ul>
+				
+				<form class="ym-searchform">
 
-                    <input type="search" placeholder="Search..." class="ym-searchfield">
+					<input class="ym-searchfield" type="search" placeholder="Search..." />
 
-                    <input type="submit" value="Search" class="ym-searchbutton">
+					<input class="ym-searchbutton" type="submit" value="Search" />
 
-                </form>
-                
-            
-            </div>
-                
-        </div>
-    </div>
+				</form>
+				
+			
+			</div>
+				
+		</div>
 
 </nav>
 		</header>
