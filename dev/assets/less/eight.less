@@ -39,13 +39,21 @@ margin-right: @content-margin}
 
 body {
 font-size: (@font-size) / @em;
-background:#070707 url(http://direct.snailface.com/images/lfr-bg.png);
-background-repeat:no-repeat;background-attachment:fixed;background-position:center 33px;margin:0;padding:12px 0 4px 0;
+background: @bgcolor8 @bgimage8;
+background-repeat:no-repeat;background-attachment:fixed;background-position:@bgpos8;margin:@bgmargin8;padding:@bgpad8;
 }
 
 #content {
-border-top-left-radius: 5em;
-border-bottom-right-radius: 5em;
+
+//Border radius
+-webkit-border-radius: @contentradius8;
+-moz-border-radius: @contentradius8;
+border-radius: @contentradius8;
+//Box shadow
+ -webkit-box-shadow: @contentshadow8 0px 0 3em;
+ -moz-box-shadow: @contentshadow8 0 0 3em;
+ box-shadow: @contentshadow8 0 0 3em;
+ opacity: @contentop8;
 }
 
 
