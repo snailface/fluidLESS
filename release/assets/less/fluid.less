@@ -1,5 +1,5 @@
 /*
-  fluidLESS Version 1.5 <https://github.com/snailface/fluidLESS>
+  fluidLESS Version 1.6 <https://github.com/snailface/fluidLESS>
   based on <http://goldengridsystem.com>
   redesigned by Snailface <http://snailface.com/>
   licensed under MIT <http://opensource.org/licenses/mit-license.php>
@@ -12,6 +12,7 @@
 @import 'helpful-LESS-functions.less';
 
 @import 'settings.less';
+//@import 'settings-lfr.less';
 
 
 
@@ -19,8 +20,6 @@
   Margin, padding, and border resets
   except for form elements
 */
-
-
 
 body, #guide, #article {width: 100%;}
 
@@ -36,7 +35,7 @@ h1,h2,h3,h4,h5,h6,a,p {z-indez:1000;}
 // see Troubleshooting.less to toggle options
 @import 'troubleshooting.less';
 @import 'global.less';
+@import 'custom.less';
 @import 'four.less';
 @import 'eight.less';
 @import 'sixteen.less';
-@import 'custom.less';

@@ -39,6 +39,25 @@ margin-right: @content-margin}
 
 body {
 font-size: (@font-size) / @em;
+background: @bgcolor8 @bgimage8;
+background-repeat:no-repeat;background-attachment:fixed;background-position:@bgpos8;margin:@bgmargin8;padding:@bgpad8;
+}
+
+#content {
+
+//Border radius
+-webkit-border-radius: @contentradius8;
+-moz-border-radius: @contentradius8;
+border-radius: @contentradius8;
+//Box shadow
+ -webkit-box-shadow: @contentshadow8 0px 0 3em;
+ -moz-box-shadow: @contentshadow8 0 0 3em;
+ box-shadow: @contentshadow8 0 0 3em;
+ opacity: @contentop8;
+}
+
+#masthead img {
+	width: 50px;
 }
 
 #masthead, #content, #colophon .inner {
@@ -176,6 +195,10 @@ font-size: (@font-size + 1) / @em;
 @media screen and (min-width: @width-medium) {
 body {
 font-size: (@font-size) / @em;
+}
+
+#masthead img {
+	width: 65px;
 }
 
 #masthead {
