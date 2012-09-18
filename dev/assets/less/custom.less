@@ -210,7 +210,84 @@ html * {
 		color: #FFF;
 	}
   
+//Account Dropdown Navagation Add-on
 
+
+.navdropdown {
+    width: 175px;
+    color: #555;
+    position: relative;
+    height: 2em;
+    text-align:lest;
+    z-index:9998;
+}
+.navsubmenu
+{
+    background: #fff;
+    position: absolute;
+    top: -12px;
+    left: -20px;
+    z-index: 100;
+    width: 135px;
+    display: none;
+    margin-left: 10px;
+    padding: 40px 0 5px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.navdropdown  li a {
+    color: #555555;
+    display: block;
+    font-family: arial;
+    font-weight: bold;
+    padding: 6px 15px;
+    cursor: pointer;
+    text-decoration:none;
+}
+
+.navdropdown li a:hover{
+    background: @primary;
+    color: #FFFFFF;
+    text-decoration: none;
+    
+}
+a.account {
+    font-size: 14px;
+    line-height: 16px;
+    color: #555;
+    position: absolute;
+    z-index: 110;
+    
+    padding: 11px 0 0 20px;
+    height: 28px;
+    min-width: 121px;
+    margin: -11px 0 0 -10px;
+    text-decoration: none;
+    background: url(../../assets/images/arrow.png) 116px 17px no-repeat;
+    cursor:pointer;
+}
+div.email {
+    font-size: 14px;
+    line-height: 16px;
+    color: #555;
+    display:block;
+    z-index:9999;
+    padding: 11px 0 0 20px;
+    height: 28px;
+    margin: -11px 0 0 -10px;
+    text-decoration: none;
+    cursor:pointer;
+}
+.root
+{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+    font-size: 12px;
+    padding: 11px 0 0 0px;
+    border-top:1px solid #dedede;
+}
 
 
 
