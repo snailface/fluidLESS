@@ -15,7 +15,7 @@ Is a fluid-width grid system composed out of 18 even columns utilizing LESS. Bas
 - **fluid.js** contains Golden Gridlet, a script that overlays the fluidLESS grid and a baseline grid of 1.5em onto the page. Can be customized around the top of the file. Powered by the [Ender library](http://ender.no.de/).
 - **fitVids.js** contains the code used for resizable iframes which you can find the source to [here](http://fitvidsjs.com/).
 - **kendo.web.min.js** contains base code for KendoUI, used for example purposes only. Check out [Telerik](http://www.telerik.com/)'s awesome [KendoUI](http://www.KendoUI.com/) for more information
-- **bootstrap is managed by Twitter we are using it for their buttons/menus more information can be seen [here](http://twitter.github.com/bootstrap/).
+- **bootstrap** is managed by Twitter we are using it for their buttons/menus more information can be seen [here](http://twitter.github.com/bootstrap/).
 
 ## Credits
  
