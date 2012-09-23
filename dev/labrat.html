@@ -1,4 +1,5 @@
-<!doctype html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <!--[if lt IE 8]><html class="ie"><![endif]-->
 
 	
@@ -9,20 +10,23 @@
 		<title>fluidLESS: barebones. </title>
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		
-        <link rel="stylesheet/less" href="assets/less/fluid.less" type="text/css">
+		<link rel="stylesheet/less" href="assets/less/bootstrap/bootstrap.less" type="text/css">
+		<link rel="stylesheet/less" href="assets/less/fluid.less" type="text/css">
+        
         <link href="assets/styles/kendo.common.min.css" rel="stylesheet" />
     	<link href="assets/styles/kendo.default.min.css" rel="stylesheet" />
-        <script src="assets/javascript/jquery.min.js" type="text/javascript"></script>
+
+	    <script src="assets/javascript/jquery.min.js" type="text/javascript"></script>
         <script src="assets/javascript/kendo.web.min.js" type="text/javascript"></script>
 		<script src="assets/javascript/less-1.3.0.js" type="text/javascript"></script>
         <script src="assets/javascript/fitVids.js" type="text/javascript"></script>
-        <script src="assets/javascript/tabs.js" type="text/javascript"></script>
-        <script src="assets/javascript/domscript.js" type="text/javascript"></script>
-        
-		<script type="text/javascript" src="http://use.typekit.com/xoy3bkl.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<script src="assets/javascript/fluid.js"></script>
+		<script src="assets/javascript/accountnav.js"></script>
+		<script src="assets/javascript/bootstrap/bootstrap-dropdown.js"></script>
+		<script src="assets/javascript/bootstrap/bootstrap-button.js"></script>
+		<script src="assets/javascript/bootstrap/bootstrap-alert.js"></script>
+		
+	
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -35,190 +39,145 @@
 	
 	<body lang="en">
 	
-		<header id="masthead"> 
-			<div class="wrapper" class="k-content">
-				<h1><hgroup>
-					Lo-Fi Resistance
-                </hgroup>
+		<header id="masthead">
+			<div class="wrapper">
+				<h1>
+					fluidLESS <img src="assets/images/icon.png"> <div class="navdropdown" style=" float:right">
+    <div class="btn-group">
+
+    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    Account
+    <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+	<li><a href="#">Administration</a></li>
+    <li><a href="#">Edit Account</a></li>
+    <li><a href="#">Change Password</a></li>
+        <li class="dropdown-submenu">
+			<a tabindex="-1" href="#" >More options</a>
+			<ul class="dropdown-menu" style="left:-95%;border-radius: 6px 0px 6px 6px;">
+				<li><a href="#">Option 1</a></li>
+				<li><a href="#">Option 2</a></li>
+				<li><a href="#">Option 3</a></li>
+			</ul>
+		</li>
+    <li class="divider"></li>
+    <li><a href="#">Logout</a></li>
+    </ul>
+    </div>
+	</div>
+
+
+
 				</h1>
 				<p>
 					A folding grid for responsive design.
 				</p>
-
-
-
 			</div>
-<nav id="level2"  role="navigation">
-	<div class="ym-wrapper">
-		<div class="ym-wbox">
-			<div class="ym-hlist">
-				<ul>
-					<li {if '{embed:loc}' == 'Updates'} class="active" {if:else}{/if}><a href="http://lofiresistance.com/lfr/index">Updates</a></li>
-					<li {if '{embed:loc}' == 'Bio'} class="active" {if:else}{/if}><a href="http://lofiresistance.com/lfr/biography">Biography</a></li>
-					<li {if '{embed:loc}' == 'Media'} class="active" {if:else}{/if}><a href="http://lofiresistance.com/lfr/media">Media</a></li>
-					<li {if '{embed:loc}' == 'Live'} class="active" {if:else}{/if}><a href="http://lofiresistance.com/lfr/live">Live</a></li>
-					<li {if '{embed:loc}' == 'Store'} class="active" {if:else}{/if}><a href="http://lofiresistance.bandcamp.com">Store</a></li>
-					<li {if '{embed:loc}' == 'Links'} class="active" {if:else}{/if}><a href="http://lofiresistance.com/lfr/links">Links</a></li>
-				</ul>
-				
-				<form class="ym-searchform">
 
-					<input class="ym-searchfield" type="search" placeholder="Search..." />
-
-					<input class="ym-searchbutton" type="submit" value="Search" />
-
-				</form>
-				
-			
-			</div>
-				
-		</div>
-
-</nav>
 		</header>
 		
-
-		<article id="content">
+		
+		<article id="content" style="overflow: hidden;">
         
-	                
-<div id="guide">
+	               
+
 <header class="wrapper">
-<h2>Full</h2>
-<p>This is full</p>
+<h2>Halve</h2>
+<p>This is a Halve</p>
 </header>
-<section id="full">
-<div class="wrapperfull">
+<section id="halve">
+<div class="wrapper2c1">
 
-				<iframe src="https://na3.salesforce.com/sserv/login.jsp?orgId=00D50000000792i" width="450" height="290" ></iframe>
-        
+<h3>About fluidLESS</h3>
 
-</div>
-</section>
-</div>
-
-
-<section id="full">
-
-    <div class="wrapperfull">
-
-
-
-    <div id="ctl00_MainContent_Panel1">
-
-    
-
-    <h2><span id="ctl00_MainContent_LabelMessage" style="color:Red;"></span></h2></br>
-
-    <ol class="forms">
-
-        <li>
-
-            <label for="First Name">First Name:</label>
-
-                <input name="ctl00$MainContent$TextBoxFirstName" type="text" value="First Name5/30/2012 4:36:20 PM" maxlength="50" id="ctl00_MainContent_TextBoxFirstName" />
-
-                
-
-        </li>
-
-        <li>    
-
-            <label for="Middle Name">Middle Name:</label>
-
-    <input name="ctl00$MainContent$TextBoxMiddleName" type="text" value="Middle Name5/30/2012 4:36:20 PM" maxlength="50" id="ctl00_MainContent_TextBoxMiddleName" />
-
-    
-
-         </li>
-
-         <li>
-
-            <label for="Last Name">Last Name:</label>
-
-                <input name="ctl00$MainContent$TextBoxLastName" type="text" value="Last Name5/30/2012 4:36:20 PM" maxlength="50" id="ctl00_MainContent_TextBoxLastName" />
-
-                
-
-        </li>
-
-        <li>
-
-        <label for="Email:">Email:</label>
-
-            <input name="ctl00$MainContent$TextBoxEmail" type="text" value="admintestuser@bob.com" maxlength="150" id="ctl00_MainContent_TextBoxEmail" />
-
-            
-
-        </li>
-
-        <li>
-
-        <label for="Confirm Email:">Confirm Email:</label>
-
-    <input name="ctl00$MainContent$TextBoxEmailConfirm" type="text" value="admintestuser@bob.com" maxlength="150" id="ctl00_MainContent_TextBoxEmailConfirm" />
-
-    </li>
-
-   <li>
-
-        <label for="Phone">Phone:</label>
-
-    <input name="ctl00$MainContent$TextBoxPhone" type="text" value="555 555 6666" maxlength="14" id="ctl00_MainContent_TextBoxPhone" />
-
-    
-
-    </li>
-
-        <li>
-
-        <label for="Address 1">Address 1:</label>
-
-    <input name="ctl00$MainContent$TextBoxAddress1" type="text" value="15/30/2012 4:36:20 PM" maxlength="50" id="ctl00_MainContent_TextBoxAddress1" />
-
-    
-
-    </li>
-
-        <li>
-
-         <label for="Address 2">Address 2:</label>
-
-    <input name="ctl00$MainContent$TextBoxAddress2" type="text" value="25/30/2012 4:36:20 PM" maxlength="50" id="ctl00_MainContent_TextBoxAddress2" />
-
-    
-
-    </li>
-
-        <li>
-
-        <label for="Address 3">Address 3:</label>
-
-    <input name="ctl00$MainContent$TextBoxAddress3" type="text" value="35/30/2012 4:36:20 PM" maxlength="50" id="ctl00_MainContent_TextBoxAddress3" />
-
-    
-
-    </li>
-
-
-
-    <input type="submit" name="ctl00$MainContent$ButtonSubmit" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$ButtonSubmit&quot;, &quot;&quot;, false, &quot;&quot;, &quot;EditUser.aspx&quot;, false, false))" id="ctl00_MainContent_ButtonSubmit" />
-
-
-
-
+<ul class="nav nav-tabs nav-stacked">
+          <li class="active"><a href="#dropdowns"><i class="icon-comment"></i> Dropdowns</a></li>
+          <li class=""><a href="#buttonGroups"><i class="icon-bell"></i> Button groups</a></li>
+          <li><a href="#buttonDropdowns"><i class="icon-chevron-right"></i> Button dropdowns</a></li>
+          <li class="active"><a href="#navs"><i class="icon-chevron-right"></i> Navs</a></li>
+          <li><a href="#navbar"><i class="icon-chevron-right"></i> Navbar</a></li>
+          <li><a href="#breadcrumbs"><i class="icon-chevron-right"></i> Breadcrumbs</a></li>
+          <li><a href="#pagination"><i class="icon-chevron-right"></i> Pagination</a></li>
+          <li><a href="#labels-badges"><i class="icon-chevron-right"></i> Labels and badges</a></li>
+          <li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
+          <li><a href="#thumbnails"><i class="icon-chevron-right"></i> Thumbnails</a></li>
+          <li><a href="#alerts"><i class="icon-chevron-right"></i> Alerts</a></li>
+          <li><a href="#progress"><i class="icon-chevron-right"></i> Progress bars</a></li>
+          <li><a href="#misc"><i class="icon-chevron-right"></i> Misc</a></li>
+ </ul>       
 
 </div>
-
-
-
-
-
+<h3>Woot</h3>
+<div class="wrapper2c2">
+    <div class="alert alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <h4>Warning!</h4>
+    Best check yo self, you're not......................................................................................................
     </div>
 
-    </section>
+        <form>
+    <legend>Legend</legend>
+    <label>Label name</label>
+    <input type="text" placeholder="Type something…">
+    <span class="help-block">Example block-level help text here.</span>
+    <label class="checkbox">
+    <input type="checkbox"> Check me out
+    </label>
+    <button type="submit" class="btn">Submit</button>
+    </form>
+
+
+        <form class="form-horizontal">
+    <div class="control-group">
+    <label class="control-label" for="inputEmail">Email</label>
+    <div class="controls">
+    <input type="text" id="inputEmail" placeholder="Email">
+    </div>
+    </div>
+    <div class="control-group">
+    <label class="control-label" for="inputPassword">Password</label>
+    <div class="controls">
+    <input type="password" id="inputPassword" placeholder="Password">
+    </div>
+    </div>
+    <div class="control-group">
+    <div class="controls">
+    <label class="checkbox">
+    <input type="checkbox"> Remember me
+    </label>
+    <button type="submit" class="btn">Sign in</button>
+    </div>
+    </div>
+    </form>
 
 
 
+<select>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+ 	<span class="label label-success">Success</span>
+
+
+    <div class="input-append">
+    <input class="span4" id="appendedInputButton" size="20" type="text"><button class="btn" type="button">Go!</button>
+    </div>
+     
+    <div class="input-append">
+    <input  id="appendedInputButtons" size="16" type="text"><button class="btn" type="button">Search</button><button class="btn" type="button">Options</button>
+    </div>
+</section>
+
+
+
+
+
+
+</div>
 </article>
 
 
@@ -227,14 +186,14 @@
 			<div class="inner">
 				<section id="follow" class="wrapper">
 					<p>
-					<a href="http://twitter.com/snailface/">Follow @snailface</a> on Twitter to stay up to date with fluidLESS.
+					Follow <a href="http://twitter.com/snailface/">@snailface</a> on Twitter to stay up to date with fluidLESS.
 					</p>
 				</section>
 				
 				<div id="promoGroup">	
 					<section id="author" class="wrapper">
 						<h3>Developed by</h3>
-						<a href="http://jonikorpi.com/">
+						<a href="http://snailface.com/">
 							<img src="https://en.gravatar.com/userimage/5793207/ea45505bdc45c88e1c91f528c680c899.png" alt="Avatar"/>
 						</a>
 						<p>
@@ -245,15 +204,17 @@
 				</div>
 				
 				<section id="copyright" class="wrapper">
-					<p>Beta Version 1.2. This site, its code and design, and fluidLESS itself are licensed under <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The typeface used is <a href="http://typekit.com/fonts/ff-dagny-web-pro">FF Dagny</a>, served via <a href="http://typekit.com/">Typekit</a>. Javascript powered by <a href="http://ender.no.de/">Ender</a>, CSS by <a href="http://lesscss.org/">LESS</a>. Max-width: 5120px;</p>
+					<p>Version 1.6. This site, its code and design, and fluidLESS itself are licensed under <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. Javascript powered by <a href="http://ender.no.de/">Ender</a>, CSS by <a href="http://lesscss.org/">LESS</a>. Coded with <a href="http://www.sublimetext.com/">Sublime Text 2</a>. Max-width: 5120px;</p>
 				</section>
 			
 			</div>
 		</footer>
-		
+	
+
+
 	<script type="text/javascript">
 		$("#content").fitVids();
 	</script> 		
+
 	</body>
-	
 </html>
