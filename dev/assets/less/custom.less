@@ -13,8 +13,6 @@
 
 p {padding: 10px;} 
 
-li i {float:right;}
-
 #active li {color:#666}
 
 // KendoUI grid fix - creates lag though
@@ -45,6 +43,8 @@ li#active {color:#000; font:20px}
 
 // Bootstrap fixes
 
+li i {float:right;}
+
 .nav-tabs > li > a {
   
   border-bottom-color: transparent;
@@ -65,8 +65,17 @@ li#active {color:#000; font:20px}
   padding: 2;
   text-shadow: 0 1px 0 rgba(255,255,255,.5);
   .border-radius(4px);
-
 }
+
+.alert .close {
+    line-height: 20px;
+    position: relative;
+    right: 7px;
+    top: -1px;
+}
+
+textarea {height:150px}
+input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input { height:30px}
 
 //lofiresistance
 
