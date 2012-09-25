@@ -13,7 +13,9 @@
 
 p {padding: 10px;} 
 
-i {float:right;}
+li i {float:right;}
+
+#active li {color:#666}
 
 // KendoUI grid fix - creates lag though
 
@@ -40,6 +42,31 @@ clear:both;
 }
 
 li#active {color:#000; font:20px}
+
+// Bootstrap fixes
+
+.nav-tabs > li > a {
+  
+  border-bottom-color: transparent;
+  color: @emphasis;
+}
+
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover {
+  color: #fff;
+  background-color: @main-color;
+  border-bottom-color: transparent;
+  cursor: default;
+  border-bottom: none;
+}
+
+.alert {
+    width: 96%;
+  padding: 2;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  .border-radius(4px);
+
+}
 
 //lofiresistance
 

@@ -149,16 +149,16 @@ color: @background;
 
 a {text-decoration: none}
 
-#content a {
+div#content a {
 text-decoration: none;
 color: @emphasis;
 }
+
 #content p a {
 text-decoration: none;
 color: @emphasis;
 border-bottom: 2/@em solid @link;
 }
-
 
 // KendoUI fix - creates lag though
 
@@ -184,6 +184,11 @@ border-bottom-color: @link;
 a:active {
 border-bottom-color: @link;
 color: @link;
+}
+
+a:active li {
+border-bottom-color: #fff;
+color: #fff;
 }
 
 #colophon a:active {
