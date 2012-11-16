@@ -22,12 +22,18 @@ border: 0;
 -ms-interpolation-mode: bicubic;
 }
 
-ul, ol {
+ul {
 	list-style-type: disc;
 	list-style-image: url(bullet.gif);
 	list-style-position: inside;
 	margin-left: @ul-margin;
 	}
+
+ul,ol {
+/* Giving lists room to breath. */
+margin: 1em;
+}
+
 
 
 /*
