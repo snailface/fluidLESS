@@ -45,7 +45,7 @@ li#active {color:#000; font:20px}
 
 // Bootstrap fixes
 
-li i {float:right;}
+ li i {float:left; padding-right:5px;}
 
 .nav-tabs > li > a {
   
@@ -338,84 +338,142 @@ html * {
 		color: #FFF;
 	}
   
-//Account Dropdown Navagation Add-on
+// Bootstrap fixes
 
+#nav-drop-left {
+top: 0;
+left: -100%;
+margin-top: -6px;
+margin-left: 15px;
+-webkit-border-radius: 6px 0px 6px 6px;
+-moz-border-radius: 6px 0px 6px 6px;
+border-radius: 6px 0px 6px 6px;
+}
 
-.navdropdown {
-    width: 175px;
-    color: #555;
+#content li i {float:right;}
+
+.nav-tabs > li > a {
+  
+  border-bottom-color: transparent;
+  color: @emphasis;
+}
+
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover {
+  color: #fff;
+  background-color: @main-color;
+  border-bottom-color: transparent;
+  cursor: default;
+  border-bottom: none;
+}
+
+.alert {
+    width: 100%;
+  padding: 2;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  .border-radius(4px);
+}
+
+.alert .close {
+    line-height: 20px;
     position: relative;
-    height: 2em;
-    text-align:lest;
+    right: 7px;
+    top: -1px;
+}
+
+textarea {height:150px}
+input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input { height:30px}
+
+// Dropdown Accoutn Navigation Override
+
+.navbar .nav.pull-right .dropdown-menu {
+  left: auto;
+  right: 0;
+  &:before {
+    left: auto;
+    right: 12px;
+  }
+  &:after {
+    left: auto;
+    right: 13px;
+  }
+}
+
+.dropdown-menu {
+    background-clip: padding-box;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    left: 0;
+    list-style: none outside none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 5px 0;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+}
+
+#btn-group-acct {
+    position:absolute;
+right:0px;
+top:10px;
+clear:none;
+padding: 5px 0 5px;
     z-index:9998;
 }
-.navsubmenu
-{
-    background: #fff;
+
+// Dropdown Accoutn Navigation Override
+
+.navbar .nav.pull-right .dropdown-menu {
+  left: auto;
+  right: 0;
+  &:before {
+    left: auto;
+    right: 12px;
+  }
+  &:after {
+    left: auto;
+    right: 13px;
+  }
+}
+
+.dropdown-menu {
+    background-clip: padding-box;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    left: 0;
+    list-style: none outside none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 5px 0;
     position: absolute;
-    top: 20px;
-    left: -43px;
-    z-index: 109;
-    width: 185px;
-    display: none;
-    margin-left: 10px;
-    padding: 5px 0 5px;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    top: 100%;
+    z-index: 1000;
 }
 
-.navdropdown  li a {
-    color: #555555;
-    display: block;
-    font-family: arial;
-    font-weight: bold;
-    padding: 6px 15px;
-    cursor: pointer;
-    text-decoration:none;
+#btn-group-acct {
+    position:absolute;
+right:0px;
+top:10px;
+clear:none;
+padding: 5px 0 5px;
+    z-index:9998;
 }
 
-.navdropdown li a:hover{
+//Override third party links to use fluidLESS settings
+.k-state-hover > .k-link, .btn-group li a:hover, .dropdown-menu li > a:hover, .dropdown-menu li > a:focus
+{
     background: @primary;
     color: #FFFFFF;
     text-decoration: none;
-    
 }
-a.account {
-    font-size: 14px;
-    line-height: 16px;
-    color: #555;
-    position: absolute;
-    z-index: 110;
-    padding: 11px 0 0 11px;
-    height: 28px;
-    width: 10px;
-    margin: -11px 0 0 130px;
-    text-decoration: none;
+.dropdown-submenu:hover > a
+ {
+    background: @secoundary;
     color: #FFFFFF;
-    background: #FFFFFF url(../../assets/images/arrow.png) 10px 17px no-repeat;
-    cursor:pointer;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
-}
-div.email {
-    font-size: 14px;
-    line-height: 16px;
-    color: #555;
-    display:block;
-    z-index:9999;
-    width:300px;
-    padding: 11px 0 0 20px;
-    height: 28px;
-    margin: -11px 0 0 -150px;
     text-decoration: none;
-    cursor:pointer;
-}
-.root
-{
-    list-style:none;
-    margin:0px;
-    padding:0px;
-    font-size: 12px;
-    padding: 11px 0 0 0px;
-    //border-top:1px solid #dedede;
 }
