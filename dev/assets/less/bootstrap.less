@@ -1,0 +1,220 @@
+/*
+*
+*  Bootstrap & Kendo Overrides
+*  by TownSuite 	<http://townsuite.com/>
+*  Add your own LESS/CSS here to flavour the framework to your liking
+*/
+
+// KendoUI Overrides
+
+//override the kendo highlight row color
+.k-state-selected, .k-list > .k-state-selected, .k-list > .k-state-focused, .k-list > .k-state-highlight, .k-panelbar > .k-state-selected, .k-panel > .k-state-selected, .k-button:active, .k-ghost-splitbar-vertical, .k-ghost-splitbar-horizontal, .k-draghandle.k-state-selected:hover, .k-state-selected.k-state-focused, .k-state-selected.k-state-highlight  {
+    background-color: @main-color;
+    border-color: @main-color;
+    color: rgb(255, 255, 255);
+	}
+
+//override kendo highlight block color
+.k-state-focused{
+    background-color: @primary;
+    border-color: @primary;
+	color: rgb(255, 255, 255);
+}
+
+.kendofix a, .k-icon a, .k-window-actions a, {
+text-decoration: default;
+color: default;
+border-bottom: none;
+}
+
+a.kendolink, a.login, a.logout  {
+color: darken(@primary, 5%);
+}
+
+a:hover.kendolink, a:hover.login, a:hover.logout {
+border-bottom: 2/@em solid darken(@primary, 15%);cursor:pointer;
+}
+
+a:active.kendolink, a:active.login, a:active.logout {
+border-bottom: 2/@em solid @emphasis;
+}
+
+//bottom grid nav full width
+.k-pager-wrap, .k-grid-pager {
+width: 100% - 0.425;
+}
+
+//grid auto resize width 100%
+.k-grid, #k-grid  {
+width: 100%;
+overflow: hidden;
+}
+
+.menu {
+padding-top:10px;
+}
+
+.wrapperfull div {
+width: 100%;
+clear:both;
+}
+
+// Bootstrap overrides
+
+#nav-drop-left {
+top: 0;
+left: -100%;
+margin-top: -6px;
+margin-left: 15px;
+-webkit-border-radius: 6px 0px 6px 6px;
+-moz-border-radius: 6px 0px 6px 6px;
+border-radius: 6px 0px 6px 6px;
+}
+
+#content li i {float:right;}
+
+.nav-tabs > li > a {
+  
+  border-bottom-color: transparent;
+  color: @emphasis;
+}
+
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover {
+  color: #fff;
+  background-color: @main-color;
+  border-bottom-color: transparent;
+  cursor: default;
+  border-bottom: none;
+}
+
+.alert {
+    width: 100%;
+  padding: 2;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  .border-radius(4px);
+}
+
+.alert .close {
+    line-height: 20px;
+    position: relative;
+    right: 7px;
+    top: -1px;
+}
+
+// Dropdown Account Navigation Override
+
+.navbar .nav.pull-right .dropdown-menu {
+  left: auto;
+  right: 0;
+  &:before {
+    left: auto;
+    right: 12px;
+  }
+  &:after {
+    left: auto;
+    right: 13px;
+  }
+} 
+
+.dropdown-menu {
+    background-clip: padding-box;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    left: 0;
+    list-style: none outside none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 5px 0;
+    position: absolute;
+    top: 100%;
+    z-index: 9000;
+}
+
+#btn-group-acct {
+    position:absolute;
+    right:0px;
+    top:10px;
+    clear:none;
+    padding: 5px 0 5px;
+    z-index:9998;
+}
+
+//button override colors
+
+.btn-primary {
+    background-color: rgb(0, 109, 204);
+    background-image: linear-gradient(to bottom, @secoundarylighter, @secoundary);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: rgb(255, 255, 255);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+    background-color: @secoundary;
+    color: rgb(255, 255, 255);
+}
+
+// Bootstrap fixes
+
+#nav-drop-left {
+top: 0;
+left: -100%;
+margin-top: -6px;
+margin-left: 15px;
+-webkit-border-radius: 6px 0px 6px 6px;
+-moz-border-radius: 6px 0px 6px 6px;
+border-radius: 6px 0px 6px 6px;
+}
+
+#content li i {float:right;}
+
+.nav-tabs > li > a {
+  
+  border-bottom-color: transparent;
+  color: @emphasis;
+}
+
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover {
+  color: #fff;
+  background-color: @main-color;
+  border-bottom-color: transparent;
+  cursor: default;
+  border-bottom: none;
+}
+
+.alert {
+    width: 100%;
+  padding: 2;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  .border-radius(4px);
+}
+
+.alert .close {
+    line-height: 20px;
+    position: relative;
+    right: 7px;
+    top: -1px;
+}
+
+//Override third party components to use fluidLESS settings
+.k-state-hover > .k-link, .btn-group li a:hover, .dropdown-menu li > a:hover, .dropdown-menu li > a:focus
+{
+    background: @primary;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.dropdown-submenu:hover > a
+ {
+    background: @secoundary;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.pull-right > .dropdown-menu {
+    left: auto;
+    right: 0;
+}
