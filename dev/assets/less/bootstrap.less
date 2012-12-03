@@ -104,6 +104,14 @@ border-radius: 6px 0px 6px 6px;
 
 // Dropdown Account Navigation Override
 
+.dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
+    background-color: @primary;
+    background-image: linear-gradient(to bottom, @primary, @secoundary);
+    background-repeat: repeat-x;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
 .navbar .nav.pull-right .dropdown-menu {
   left: auto;
   right: 0;
@@ -142,10 +150,10 @@ border-radius: 6px 0px 6px 6px;
     z-index:9998;
 }
 
-//button override colors
+//button primary override 
 
 .btn-primary {
-    background-color: rgb(0, 109, 204);
+    background-color: @primary;
     background-image: linear-gradient(to bottom, @secoundarylighter, @secoundary);
     background-repeat: repeat-x;
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
@@ -155,6 +163,10 @@ border-radius: 6px 0px 6px 6px;
 .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
     background-color: @secoundary;
     color: rgb(255, 255, 255);
+}
+
+.btn-group.open .btn-primary.dropdown-toggle {
+    background-color: @secoundary;
 }
 
 // Bootstrap fixes
