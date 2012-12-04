@@ -56,7 +56,7 @@
 						    <li><a href="#"><i class="icon-user"></i> Edit Account</a></li>
 						    <li><a href="#"><i class="icon-lock"></i> Change Password</a></li>
 						        <li class="dropdown-submenu">
-									<a tabindex="-1" href="#" ><i class="icon-th"></i> More options</a>
+									<a tabindex="-1" data-toggle="dropdown" ><i class="icon-th"></i> More options</a>
 									<ul class="dropdown-menu" id="nav-drop-left">
 										<li><a href="#"><i class="icon-pencil"></i> Option 1</a></li>
 										<li><a href="#"><i class="icon-home"></i> Option 2</a></li>
@@ -343,6 +343,10 @@ Selections currently available for use include:
 
 	<script type="text/javascript">
 		$("#content").fitVids();
+		//Bootstrap mobile dropdown hack till next release
+        $('a.dropdown-toggle, .dropdown-menu a').on('touchstart', function (e) {
+            e.stopPropagation();
+        });
 	</script> 		
 
 	</body>
