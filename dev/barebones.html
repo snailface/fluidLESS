@@ -25,6 +25,7 @@
 		<script src="assets/javascript/accountnav.js"></script>
 		<script src="assets/javascript/bootstrap/bootstrap-dropdown.js"></script>
 		<script src="assets/javascript/bootstrap/bootstrap-button.js"></script>
+		<script src="assets/javascript/bootstrap/bootstrap-tooltip.js"></script>
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -125,6 +126,8 @@ Selections currently available for use include:
  	<li>Third</li>
  	<li>Quarter</li>
  </ol> 
+
+ <a href="#" rel="tooltip" title="first tooltip">hover over me</a>
 </p>
 
           <embed src="http://www.youtube.com/v/sxBMfmAHENc?hd=1" type="application/x-shockwave-flash" wmode="transparent" width="450" height="290"></embed>
@@ -209,7 +212,9 @@ Selections currently available for use include:
 <div class="wrapper4c1">
 
 <h3>One quarter</h3>
-<p>Content needs to be added in order to see desired results. This content is for testing purposes only. Random content </p>
+<p>
+	Tight pants next level keffiyeh <a data-placement="right" rel="tooltip" href="#" data-original-title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a data-placement="bottom" title="Another tooltip" rel="tooltip" href="#">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a data-placement="left" title="Another one here too" rel="tooltip" href="#">whatever keytar</a>, scenester farm-to-table banksy Austin <a title="The last tip!" rel="tooltip" href="#">twitter handle</a> freegan cred raw denim single-origin coffee viral.
+            </p>
 
 </div>
 <div class="wrapper4c2">
@@ -347,6 +352,8 @@ Selections currently available for use include:
         $('a.dropdown-toggle, .dropdown-menu a').on('touchstart', function (e) {
             e.stopPropagation();
         });
+        //tooltips
+        $("[rel=tooltip]").tooltip();
 	</script> 		
 
 	</body>
