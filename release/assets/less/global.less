@@ -22,12 +22,18 @@ border: 0;
 -ms-interpolation-mode: bicubic;
 }
 
-ul, ol {
+ul {
 	list-style-type: disc;
 	list-style-image: url(bullet.gif);
 	list-style-position: inside;
 	margin-left: @ul-margin;
 	}
+
+ul,ol {
+/* Giving lists room to breath. */
+margin: 1em;
+}
+
 
 
 /*
@@ -147,7 +153,14 @@ color: @aside;
 color: @background;
 }
 
-a {
+a {text-decoration: none}
+
+div#content a {
+text-decoration: none;
+color: @emphasis;
+}
+
+#content p a {
 text-decoration: none;
 color: @emphasis;
 border-bottom: 2/@em solid @link;
@@ -166,7 +179,7 @@ color: @link;
 border-bottom-color: transparent;
 }
 
-a:hover {
+#content a:hover {
 border-bottom-color: @emphasis;
 }
 
@@ -177,6 +190,11 @@ border-bottom-color: @link;
 a:active {
 border-bottom-color: @link;
 color: @link;
+}
+
+a:active li {
+border-bottom-color: #fff;
+color: #fff;
 }
 
 #colophon a:active {
@@ -219,7 +237,7 @@ float: left;
 	
 	#contactform {
 	
-	width: 500px;
+	
 	padding: 20px;
 	background: #f0f0f0;
 	overflow:auto;
@@ -245,7 +263,7 @@ float: left;
 	font-weight: bold; 
 	margin-right:10px; 
 	text-align: right; 
-	width: 130px; 
+//	width: 130px; 
 	line-height: 25px; 
 	font-size: 16px; 
 	}
@@ -255,7 +273,7 @@ float: left;
 	font-size: 15px; 
 	padding: 7px; 
 	border: 1px solid #b9bdc1; 
-	width: 20em; 
+	
 	color: @formfontcolor;	
 	border-radius: 4px 4px 4px 4px;
 	}

@@ -1,0 +1,139 @@
+/*
+*
+*  fluidLESS Framework Settings
+*  by Snailface  <http://snailface.com/>
+*	
+*/
+
+//
+// System Varibles
+//
+@line: 24; // default 24
+@column: 100% / 18; // default 100% / 24
+@font-size: 18; // default 18
+@em: @font-size*1em; // default @font-size*1em
+@base-width: 40em; // default 40
+@width-var: 10em; //default 10
+@content-width: 50; //default 50
+@multiplier: 1; //default 1
+@guide: 292; // default 292
+@padding-end: 150px; // padding on end of page
+@content-margin: 0.2em; // margin for all boxes
+@ul-margin: 25px; // margin left for lists
+
+//
+// Page Varibles
+//
+
+// Image logo Logo vars
+
+@logo1: 20px; //mobile screen
+@logo2: 50px; //tablet screen
+@logo3: 65px; //regular cpu res screen
+@logo4: 85px; //hd cpu res screen
+@logo5: 100px; //large screen
+
+//Background/content control for everything but mobile (can work with mobile if content is moved from eight.less to four.less)
+@bgcolor8: #FAFAFA; 
+@bgimage8: url();
+@bgpos8: center 33px;
+@bgpad8: 12px 0 4px 0;
+@bgmargin8: 0;
+
+@contentradius8: 0;
+@contentshadow8: rgba(255,255,255,0.9);
+@contentop8: 1.0; //opacity of content background 1.0 = 100%
+
+//
+// Navagation Vars
+//
+
+@loginfloat: right; //default right
+@loginpadding: 40px 5px 0 0; //use logo height as a pointer
+
+@logopadding: 0 0 10px 0; //use logo height as a pointer
+
+@formbackground: #E9E9E9; //default #E9E9E9
+@formhover: #fff; //default #fff
+@formfontcolor: #797979; //default #797979
+
+@shadow: #38506b;
+
+@buttoncolor1: #a5b8da; //default #a5b8da
+@buttoncolor2: #7089b3; //default #7089b3
+@buttonhover: #848FB2; //default #848FB2
+@buttonborder: #5c6f91; //default #5c6f91
+@buttonshadow: #aec3e5; //default #aec3e5
+
+//
+// Dynamic Columns - All systems must equal 100% or less
+//
+
+// Full width
+
+@wrapperfull: 100%;
+
+// 2 Columns (Halve)
+
+@2c1: 30%;
+@2c2: 68%;
+
+// 3 Columns (Third)
+
+@3c1: 31.5%;
+@3c2: 31.5%;
+@3c3: 31.5%;
+
+// 4 Columns (Quarter)
+
+@4c1: 24%;
+@4c2: 24%;
+@4c3: 24%;
+@4c4: 24%;
+
+//
+//AI / Math Logic
+//
+
+@width-8: @base-width + (@width-var * 0.65);
+@width-mobile: @base-width + (@width-var * 1.5);
+@width-tablet: @base-width + (@width-var * 2.15);
+@width-small: @base-width + (@width-var * 3.5);
+@width-medium: @base-width + (@width-var * 4.7);
+@width-large: @base-width + (@width-var * 6);
+@width-hd: @base-width + (@width-var * 8);
+
+//
+// Colors
+//
+
+@background: 	#FAFAFA; //default #FAFAFA
+
+@body-bg: 		#fff;
+@border:		0px solid #333333;
+
+@body: 			rgb(61,60,56);
+@emphasis:		rgb(23,20,9);
+@aside:			rgb(158,156,149);
+@content-frame  #000;
+
+@primary:		#A9331D;
+@secoundary:	#123;
+
+@link:			lighten(@primary, 10%);
+@main-color: 	darken(@primary, 10%);
+
+@bodycolor: #000;
+@contentcolor: #000;
+@h1color: #000;
+@h2color: #000;
+@h3color: #000;
+@h4color: #000;
+@h5color: #000;
+@h6color: #000;
+
+//
+// Fonts
+//
+@master-fonts: ff-dagny-web-pro, sans-serif;
+@code-fonts: Menlo, Monaco, monospace;
