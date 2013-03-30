@@ -11,12 +11,13 @@
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<link rel="stylesheet/less" href="assets/less/bootstrap/bootstrap.less" type="text/css">
-		
+		<link rel="stylesheet/less" href="assets/less/fluid.less" type="text/css">
         
         <link href="assets/styles/kendo.common.min.css" rel="stylesheet" />
     	<link href="assets/styles/kendo.default.min.css" rel="stylesheet" />
 
-	    <script src="assets/javascript/jquery.min.js" type="text/javascript"></script>
+	
+		<script src="assets/javascript/jquery.min.js" type="text/javascript"></script>
         <script src="assets/javascript/kendo.web.min.js" type="text/javascript"></script>
 		<script src="assets/javascript/less.js" type="text/javascript"></script>
         <script src="assets/javascript/fitVids.js" type="text/javascript"></script>
@@ -24,9 +25,7 @@
 		<script src="assets/javascript/accountnav.js"></script>
 		<script src="assets/javascript/bootstrap/bootstrap-dropdown.js"></script>
 		<script src="assets/javascript/bootstrap/bootstrap-button.js"></script>
-		<script src="assets/javascript/bootstrap/bootstrap-alert.js"></script>
-
-	
+		<script src="assets/javascript/bootstrap/bootstrap-tooltip.js"></script>
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -43,43 +42,73 @@
 			<div class="wrapper">
 				<h1>
 					fluidLESS <img src="assets/images/icon.png"> <div class="navdropdown" style=" float:right">
-    <div class="btn-group">
-    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-    Account
-    <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-	<li><a href="#">Administration</a></li>
-    <li><a href="#">Edit Account</a></li>
-    <li><a href="#">Change Password</a></li>
-        <li class="dropdown-submenu">
-			<a tabindex="-1" href="#" >More options</a>
-			<ul class="dropdown-menu" style="left:-95%;border-radius: 6px 0px 6px 6px;">
-				<li><a href="#">Option 1</a></li>
-				<li><a href="#">Option 2</a></li>
-				<li><a href="#">Option 3</a></li>
-			</ul>
-		</li>
-    <li class="divider"></li>
-    <li><a href="#">Logout</a></li>
-    </ul>
-    </div>
-	</div>
-
-
-
 				</h1>
 				<p>
 					A folding grid for responsive design.
 				</p>
-			</div>
 
+					<div class="btn-group pull-right" id="btn-group-acct">
+					    <button class="btn btn-primary btn-large dropdown-toggle" data-toggle="dropdown" href="#">
+					    Account
+					    <span class="caret"></span>
+					    </button>
+					    <ul class="dropdown-menu">
+							<li><a href="#"><i class="icon-wrench"></i> Administration</a></li>
+						    <li><a href="#"><i class="icon-user"></i> Edit Account</a></li>
+						    <li><a href="#"><i class="icon-lock"></i> Change Password</a></li>
+						        <li class="dropdown-submenu">
+									<a tabindex="-1" data-toggle="dropdown" ><i class="icon-th"></i> More options</a>
+									<ul class="dropdown-menu" id="nav-drop-left">
+										<li><a href="#"><i class="icon-pencil"></i> Option 1</a></li>
+										<li><a href="#"><i class="icon-home"></i> Option 2</a></li>
+										<li><a href="#"><i class="icon-off"></i> Option 3</a></li>
+									</ul>
+								</li>
+						    <li class="divider"></li>
+						    <li><a href="#"><i class="icon-off"></i> Logout</a></li>
+						    </ul>
+					    </div>
+					</div>
 		</header>
-		
+
+		<figure id="guides">
+			<div class="fluid-site-guide fluid-site-0"></div>
+			<div class="fluid-site-guide fluid-site-1"></div>
+			<div class="fluid-site-guide fluid-site-2"></div>
+			<div class="fluid-site-guide fluid-site-3"></div>
+			<div class="fluid-site-guide fluid-site-4"></div>
+			<div class="fluid-site-guide fluid-site-5"></div>
+			<div class="fluid-site-guide fluid-site-6"></div>
+			<div class="fluid-site-guide fluid-site-7"></div>
+			<div class="fluid-site-guide fluid-site-8"></div>
+			<div class="fluid-site-guide fluid-site-9"></div>
+			<div class="fluid-site-guide fluid-site-10"></div>
+			<div class="fluid-site-guide fluid-site-11"></div>
+			<div class="fluid-site-guide fluid-site-12"></div>
+			<div class="fluid-site-guide fluid-site-13"></div>
+			<div class="fluid-site-guide fluid-site-14"></div>
+			<div class="fluid-site-guide fluid-site-15"></div>
+			<div class="fluid-site-guide fluid-site-16"></div>
+		</figure>
 		
 		<article id="content" style="overflow: hidden;">
         
-	               
+	                
+
+<header class="wrapper">
+<h2>Full</h2>
+<p>This is full</p>
+</header>
+<section id="full">
+<div class="wrapperfull">
+	<div class="alert alert-error">
+  <button class="btn btn-link btn-large dropdown-toggle" data-toggle="dropdown" href="#">
+					    Account
+					    <span class="caret"></span>
+					    </button></div>
+<embed src="http://www.youtube.com/v/sxBMfmAHENc?hd=1" type="application/x-shockwave-flash" wmode="transparent" width="450" height="290"></embed>
+</div>
+</section>
 
 <header class="wrapper">
 <h2>Halve</h2>
@@ -90,92 +119,248 @@
 
 <h3>About fluidLESS</h3>
 
-<ul class="nav nav-tabs nav-stacked">
-          <li class="active"><a href="#"><i class="icon-chevron-right"></i> Pagination</a></li>
-          <li><a href="#"><i class="icon-chevron-right"></i> Labels and badges</a></li>
-          <li><a href="#"><i class="icon-chevron-right"></i> Typography</a></li>
-          <li><a href="#"><i class="icon-chevron-right"></i> Labels and badges</a></li>
-          <li><a href="#"><i class="icon-chevron-right"></i> Typography</a></li>
-          
-          <li><a href="#"><i class="icon-chevron-right"></i> Labels and badges</a></li>
-          <li><a href="#"><i class="icon-chevron-right"></i> Typography</a></li>
-          
+<button type="button" class="btn" id="savecomment">Submit Complaint</button>
+<button type="button" id="savecomment">Submit Complaint</button>
 
 
- </ul>       
+<div class="k-edit-form-container">
+
+        <table border="0" cellpadding="0" cellspacing="0">
+
+          <tbody><tr>
+             <td><div class="k-edit-label"><label for="FirstName">First Name</label></div></td>
+             <td><input class="k-input k-textbox" name="FirstName" data-bind="value:FirstName" required="" validationmessage="Please enter the first name" type="text"></td>
+          </tr>
+
+          <tr>
+             <td><div class="k-edit-label"><label for="FirstName">Last Name</label></div></td>
+             <td><input class="k-input k-textbox" name="LastName" data-bind="value:LastName" required="" validationmessage="Please enter the last name" type="text"></td>
+          </tr>
+        
+          <tr> 
+             <td><div class="k-edit-label"><label for="RelationshipToParticipant">Relationship To Participant</label></div></td>   
+             <td><span aria-busy="false" tabindex="0" aria-expanded="false" aria-haspopup="true" role="listbox" unselectable="on" class="k-widget k-dropdown k-header" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">Select a Relationship</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span></span><input style="display: none;" name="RelationshipToParticipant" data-bind="value:RelationshipToParticipant" data-value-field="Code" data-text-field="Description" data-source="dropDownListDS" data-role="dropdownlist" option-label="Select" data-option-label="Select a Relationship" required=""></span> </td>        
+          </tr>
+        
+          <tr>   
+            <td><div class="k-edit-label"><label for="Phone1">Phone 1</label></div></td>
+            <td width="600px"><input name="Phone1" id="Phone1" data-bind="value: Phone1" required="" validationmessage="Please enter the phone 1" placeholder="(111) 222-3333 / 1112223333" onchange="return phone1Validation()" type="text"></td>
+          </tr>
+
+          <tr>  
+            <td><div class="k-edit-label"><label for="Phone2">Phone 2</label></div></td>
+            <td><input name="Phone2" id="Phone2" data-bind="value: Phone2" required="" validationmessage="Please enter the phone 2" placeholder="(111) 222-3333 / 1112223333" onchange="return phone2Validation()" type="text"></td>
+          </tr>
+
+          <tr>    
+            <td><div class="k-edit-label"><label for="Email">Email</label></div></td>
+            <td><input name="Email" id="Email" data-bind="value: Email" required="" validationmessage="Please enter a valid email" placeholder="example@email.com" type="email"></td>
+          </tr>
+            
+          <tr>    
+            <td><div class="k-edit-label"><label for="DateOfBirth">Date Of Birth</label></div></td>
+            <td><span class="k-widget k-datepicker k-header" style=""><span class="k-picker-wrap k-state-default"><input aria-label="Current focused date is Saturday, March 30, 2013" aria-disabled="false" aria-owns="DateOfBirth_dateview" aria-expanded="false" aria-haspopup="true" role="textbox" class="k-input" style="width: 100%;" name="DateOfBirth" id="DateOfBirth" data-bind="value: DateOfBirth" data-role="datepicker" data-type="date" required="" validationmessage="Please enter a valid date of birth" type="text"><span aria-controls="DateOfBirth_dateview" role="button" unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-calendar">select</span></span></span></span></td>
+          </tr>
+                            
+          <tr>    
+            <td><div class="k-edit-label"><label for="Gender">Gender</label></div></td>   
+            <td><span aria-busy="false" tabindex="0" aria-expanded="false" aria-haspopup="true" role="listbox" unselectable="on" class="k-widget k-dropdown k-header" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">Select a Gender</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span></span><input style="display: none;" name="Gender" data-bind="value:Gender" data-value-field="Code" data-text-field="Description" data-source="dropDownListGender" data-role="dropdownlist" option-label="Select" data-option-label="Select a Gender" required=""></span></td>       
+          </tr>
+
+          <tr>    
+            <td><div class="k-edit-label"><label for="MailingAddress">Mailing Address</label></div></td>   
+            <td><input name="MailingAddress" id="MailingAddress" data-bind="value: MailingAddress" required="" validationmessage="Please enter the address" type="text"></td>
+          </tr>
+            
+          <tr>    
+            <td><div class="k-edit-label"><label for="PostalCode">Postal Code</label></div></td>   
+            <td><input name="PostalCode" id="PostalCode" data-bind="value: PostalCode" required="" validationmessage="Please enter the postal code" placeholder="T2X 1V4 / T2X1V4" onchange="return postalCodeValidation()" type="text"></td>
+          </tr>
+            
+          <tr>    
+            <td><div class="k-edit-label"><label for="MedicalNumber">Medical Number</label></div></td>   
+            <td><input name="MedicalNumber" id="MedicalNumber" data-bind="value: MedicalNumber" required="" validationmessage="Please enter the medical number" type="text"></td>
+          </tr>
+
+        </tbody></table>
+
+    <a class="k-button k-button-icontext k-grid-update" href="#"><span class="k-icon k-update"></span>Update</a><a class="k-button k-button-icontext k-grid-cancel" href="#"><span class="k-icon k-cancel"></span>Cancel</a></div>
 
 </div>
-<h3>Woot</h3>
 <div class="wrapper2c2">
-    <div class="alert alert-block">
-    <button type="button" class="close" data-dismiss="alert">×</button>
-    <h4>Warning!</h4>
-    Best check yo self, you're not......................................................................................................
-    </div>
+				<script src="assets/javascript/people.js"></script>
+			
+        <p><div id="example" class="k-content">
+            <div id="grid"></div></div></p>
 
-        <form>
-    <legend>Legend</legend>
-    <label>Label name</label>
-    <input type="text" placeholder="Type something…">
-    <span class="help-block">Example block-level help text here.</span>
-    <label class="checkbox">
-    <input type="checkbox"> Check me out
-    </label>
-    <button type="submit" class="btn">Submit</button>
-    </form>
+            <script>
+                $(document).ready(function() {
+                    $("#grid").kendoGrid({
+                        dataSource: {
+                            data: createRandomData(50),
+                            schema: {
+                                model: {
+                                    fields: {
+                                        FirstName: { type: "string" },
+                                        LastName: { type: "string" },
+                                        City: { type: "string" },
+                                        Title: { type: "string" },
+                                        BirthDate: { type: "date" },
+                                        Age: { type: "number" }
+                                    }
+                                }
+                            },
+                            pageSize: 10
+                        },
 
-    <div class="progress">
-    <div class="bar" style="width: 60%;"></div>
-    </div>
-        <form class="form-horizontal">
-    <div class="control-group">
-    <label class="control-label" for="inputEmail">Email</label>
-    <div class="controls">
-    <input type="text" id="inputEmail" placeholder="Email">
-    </div>
-    </div>
-    <div class="control-group">
-    <label class="control-label" for="inputPassword">Password</label>
-    <div class="controls">
-    <input type="password" id="inputPassword" placeholder="Password">
-    </div>
-    </div>
-    <div class="control-group">
-    <div class="controls">
-    <label class="checkbox">
-    <input type="checkbox"> Remember me
-    </label>
-    <button type="submit" class="btn">Sign in</button>
-    </div>
-    </div>
-    </form>
-
-
-
-<select>
-<option>1</option>
-<option>2</option>
-<option>3</option>
-<option>4</option>
-<option>5</option>
-</select>
- 	<span class="label label-success">Success</span>
-
-
-    <div class="input-append">
-    <input class="span4" id="appendedInputButton" size="20" type="text"><button class="btn" type="button">Go!</button>
-    </div>
-     
-    <div class="input-append">
-    <input  id="appendedInputButtons" size="16" type="text"><button class="btn" type="button">Search</button><button class="btn" type="button">Options</button>
-    </div>
+                        scrollable: true,
+                        sortable: true,
+                        filterable: true,
+                        pageable: true,
+                        columns: [
+                            {
+                                field: "FirstName",
+                                title: "First Name",
+                                width: '15%'
+                            },
+                            {
+                                field: "LastName",
+                                title: "Last Name",
+                                width: '15%'
+                            },
+                            {
+                                field: "City",
+                                width: '15%'
+                            },
+                            {
+                                field: "Title",
+								width: '25%'
+                            },
+                            {
+                                field: "BirthDate",
+                                title: "Birth Date",
+								width: '15%',
+                                template: '#= kendo.toString(BirthDate,"MM/dd/yyyy") #'
+                            },
+                            {
+                                field: "Age",
+                                width: 50
+                            }
+                        ]
+                    });
+                });
+            </script>
+        </div>
+</div>
 </section>
 
 
 
 
+<div id="guide">
+<header class="wrapper">
+<h2>Quarter</h2>
+<p>This is Quarters</p>
+</header>
+<section id="quarter">
+<div class="wrapper4c1">
+
+<h3>One quarter</h3>
+<p>
+	Tight pants next level keffiyeh <a data-placement="right" rel="tooltip" href="#" data-original-title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a data-placement="bottom" title="Another tooltip" rel="tooltip" href="#">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a data-placement="left" title="Another one here too" rel="tooltip" href="#">whatever keytar</a>, scenester farm-to-table banksy Austin <a title="The last tip!" rel="tooltip" href="#">twitter handle</a> freegan cred raw denim single-origin coffee viral.
+            </p>
+
+</div>
+<div class="wrapper4c2">
+
+<div id="guide">
+<header class="wrapper">
+<h2>Third</h2>
+<p>This is Thirds</p>
+</header>
+<section id="third">
+<div class="wrapper3c1">
+
+<h3>One third</h3>
+<p>Content needs to be added in order to see desired results. This content is for testing purposes only. Random content  </p>
+
+</div>
+<div class="wrapper3c2">
+
+<h3>Two thirds</h3>
+<p>Content needs to be added in order to see desired results. This content is for testing purposes only. Random content </p>
+</div>
+<div class="wrapper3c3">
+
+<h3>Three thirds</h3>
+<p>Content needs to be added in order to see desired results. This content is for testing purposes only. Random content </p>
+
+</div>
+</section>
+</div>
+</div>
+<div class="wrapper4c3">
+
+<h3>Three quarters</h3>
+<p>Content needs to be added in order to see desired results. This content is for testing purposes only. Random content </p>
+
+</div>
+<div class="wrapper4c4">
+
+<h3>Four quarters</h3>
+<iframe src="http://www.youtube.com/embed/sxBMfmAHENc?rel=0&amp;hd=1&amp;wmode=transparent" width="450" height="290" ></iframe>
+
+</div>
+</section>
+</div>
 
 
+<div id="guide">
+<header class="wrapper">
+<h2>Third</h2>
+<p>This is Thirds</p>
+</header>
+<section id="third">
+<div class="wrapper3c1">
+
+<h3>One third form</h3>
+<p><form id="contactform" class="rounded" method="post" action="">
+<h3>Contact Form</h3>
+<div class="field">
+	<label for="name">Name:</label>
+  	<input type="text" class="input" name="name" id="name" />
+	<p class="hint">Enter your name.</p>
+</div>
+
+<div class="field">
+	<label for="email">Email:</label>
+  	<input type="text" class="input" name="email" id="email" />
+	<p class="hint">Enter your email.</p>
+</div>
+
+<div class="field">
+	<label for="message">Message:</label>
+  	<textarea class="input textarea" name="message" id="message"></textarea>
+	<p class="hint">Write your message.</p>
+</div>
+
+
+<input type="submit" name="Submit"  class="button" value="Submit" />
+</form></p>
+
+</div>
+<div class="wrapper3c2">
+
+<h3>Two thirds</h3>
+<p>Content needs to be added in order to see desired results. This content is for testing purposes only. Random content </p>
+</div>
+<div class="wrapper3c3">
+
+<h3>Three thirds</h3>
+<p>Content needs to be added in order to see desired results. This content is for testing purposes only. Random content </p>
+
+</div>
+</section>
 </div>
 </article>
 
@@ -208,11 +393,21 @@
 			
 			</div>
 		</footer>
+		
+
 	
+
+
 
 
 	<script type="text/javascript">
 		$("#content").fitVids();
+		//Bootstrap mobile dropdown hack till next release
+        $('a.dropdown-toggle, .dropdown-menu a').on('touchstart', function (e) {
+            e.stopPropagation();
+        });
+        //tooltips
+        $("[rel=tooltip]").tooltip();
 	</script> 		
 
 	</body>
