@@ -344,3 +344,46 @@ float: left;
 	background: @buttonhover;
     cursor: pointer;
 	}
+
+	// Bootstrap fixes
+
+#nav-drop-left {
+top: 0;
+left: -100%;
+margin-top: -6px;
+margin-left: 15px;
+-webkit-border-radius: 6px 0px 6px 6px;
+-moz-border-radius: 6px 0px 6px 6px;
+border-radius: 6px 0px 6px 6px;
+}
+
+#content li i {float:right;}
+
+.nav-tabs > li > a {
+  
+  border-bottom-color: transparent;
+  color: @emphasis;
+}
+
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover {
+  color: #fff;
+  background-color: @main-color;
+  border-bottom-color: transparent;
+  cursor: default;
+  border-bottom: none;
+}
+
+.alert {
+    width: 100%;
+  padding: 2;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  .border-radius(4px);
+}
+
+.alert .close {
+    line-height: 20px;
+    position: relative;
+    right: 7px;
+    top: -1px;
+}

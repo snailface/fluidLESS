@@ -71,25 +71,6 @@
 					</div>
 		</header>
 
-		<figure id="guides">
-			<div class="fluid-site-guide fluid-site-0"></div>
-			<div class="fluid-site-guide fluid-site-1"></div>
-			<div class="fluid-site-guide fluid-site-2"></div>
-			<div class="fluid-site-guide fluid-site-3"></div>
-			<div class="fluid-site-guide fluid-site-4"></div>
-			<div class="fluid-site-guide fluid-site-5"></div>
-			<div class="fluid-site-guide fluid-site-6"></div>
-			<div class="fluid-site-guide fluid-site-7"></div>
-			<div class="fluid-site-guide fluid-site-8"></div>
-			<div class="fluid-site-guide fluid-site-9"></div>
-			<div class="fluid-site-guide fluid-site-10"></div>
-			<div class="fluid-site-guide fluid-site-11"></div>
-			<div class="fluid-site-guide fluid-site-12"></div>
-			<div class="fluid-site-guide fluid-site-13"></div>
-			<div class="fluid-site-guide fluid-site-14"></div>
-			<div class="fluid-site-guide fluid-site-15"></div>
-			<div class="fluid-site-guide fluid-site-16"></div>
-		</figure>
 		
 		<article id="content" style="overflow: hidden;">
         
@@ -101,12 +82,8 @@
 </header>
 <section id="full">
 <div class="wrapperfull">
-	<div class="alert alert-error">
-  <button class="btn btn-link btn-large dropdown-toggle" data-toggle="dropdown" href="#">
-					    Account
-					    <span class="caret"></span>
-					    </button></div>
-<embed src="http://www.youtube.com/v/sxBMfmAHENc?hd=1" type="application/x-shockwave-flash" wmode="transparent" width="450" height="290"></embed>
+	
+
 </div>
 </section>
 
@@ -125,65 +102,49 @@
 
 <div class="k-edit-form-container">
 
-        <table border="0" cellpadding="0" cellspacing="0">
+        <table cellpadding="1" cellspacing="0" style="border-collapse:collapse;">
+                <tr>
+                    <td>
+                        <table cellpadding="0">
+                            <tr>
+                                <td align="center" colspan="2">Log In</td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <label for="ctl00_MainContent_Login1_UserName" id="ctl00_MainContent_Login1_UserNameLabel">Username (email address):</label>
+                                </td>
+                                <td>
+                                    <input>*</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <label for="ctl00_MainContent_Login1_Password" id="ctl00_MainContent_Login1_PasswordLabel">Password:</label>
+                                </td>
+                                <td>
+                                    <input>*</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    &nbsp;</td>
+                            </tr>
+                           
+                            <tr>
+                                <td align="center" colspan="2" style="color:Red;">
 
-          <tbody><tr>
-             <td><div class="k-edit-label"><label for="FirstName">First Name</label></div></td>
-             <td><input class="k-input k-textbox" name="FirstName" data-bind="value:FirstName" required="" validationmessage="Please enter the first name" type="text"></td>
-          </tr>
-
-          <tr>
-             <td><div class="k-edit-label"><label for="FirstName">Last Name</label></div></td>
-             <td><input class="k-input k-textbox" name="LastName" data-bind="value:LastName" required="" validationmessage="Please enter the last name" type="text"></td>
-          </tr>
-        
-          <tr> 
-             <td><div class="k-edit-label"><label for="RelationshipToParticipant">Relationship To Participant</label></div></td>   
-             <td><span aria-busy="false" tabindex="0" aria-expanded="false" aria-haspopup="true" role="listbox" unselectable="on" class="k-widget k-dropdown k-header" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">Select a Relationship</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span></span><input style="display: none;" name="RelationshipToParticipant" data-bind="value:RelationshipToParticipant" data-value-field="Code" data-text-field="Description" data-source="dropDownListDS" data-role="dropdownlist" option-label="Select" data-option-label="Select a Relationship" required=""></span> </td>        
-          </tr>
-        
-          <tr>   
-            <td><div class="k-edit-label"><label for="Phone1">Phone 1</label></div></td>
-            <td width="600px"><input name="Phone1" id="Phone1" data-bind="value: Phone1" required="" validationmessage="Please enter the phone 1" placeholder="(111) 222-3333 / 1112223333" onchange="return phone1Validation()" type="text"></td>
-          </tr>
-
-          <tr>  
-            <td><div class="k-edit-label"><label for="Phone2">Phone 2</label></div></td>
-            <td><input name="Phone2" id="Phone2" data-bind="value: Phone2" required="" validationmessage="Please enter the phone 2" placeholder="(111) 222-3333 / 1112223333" onchange="return phone2Validation()" type="text"></td>
-          </tr>
-
-          <tr>    
-            <td><div class="k-edit-label"><label for="Email">Email</label></div></td>
-            <td><input name="Email" id="Email" data-bind="value: Email" required="" validationmessage="Please enter a valid email" placeholder="example@email.com" type="email"></td>
-          </tr>
-            
-          <tr>    
-            <td><div class="k-edit-label"><label for="DateOfBirth">Date Of Birth</label></div></td>
-            <td><span class="k-widget k-datepicker k-header" style=""><span class="k-picker-wrap k-state-default"><input aria-label="Current focused date is Saturday, March 30, 2013" aria-disabled="false" aria-owns="DateOfBirth_dateview" aria-expanded="false" aria-haspopup="true" role="textbox" class="k-input" style="width: 100%;" name="DateOfBirth" id="DateOfBirth" data-bind="value: DateOfBirth" data-role="datepicker" data-type="date" required="" validationmessage="Please enter a valid date of birth" type="text"><span aria-controls="DateOfBirth_dateview" role="button" unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-calendar">select</span></span></span></span></td>
-          </tr>
-                            
-          <tr>    
-            <td><div class="k-edit-label"><label for="Gender">Gender</label></div></td>   
-            <td><span aria-busy="false" tabindex="0" aria-expanded="false" aria-haspopup="true" role="listbox" unselectable="on" class="k-widget k-dropdown k-header" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">Select a Gender</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span></span><input style="display: none;" name="Gender" data-bind="value:Gender" data-value-field="Code" data-text-field="Description" data-source="dropDownListGender" data-role="dropdownlist" option-label="Select" data-option-label="Select a Gender" required=""></span></td>       
-          </tr>
-
-          <tr>    
-            <td><div class="k-edit-label"><label for="MailingAddress">Mailing Address</label></div></td>   
-            <td><input name="MailingAddress" id="MailingAddress" data-bind="value: MailingAddress" required="" validationmessage="Please enter the address" type="text"></td>
-          </tr>
-            
-          <tr>    
-            <td><div class="k-edit-label"><label for="PostalCode">Postal Code</label></div></td>   
-            <td><input name="PostalCode" id="PostalCode" data-bind="value: PostalCode" required="" validationmessage="Please enter the postal code" placeholder="T2X 1V4 / T2X1V4" onchange="return postalCodeValidation()" type="text"></td>
-          </tr>
-            
-          <tr>    
-            <td><div class="k-edit-label"><label for="MedicalNumber">Medical Number</label></div></td>   
-            <td><input name="MedicalNumber" id="MedicalNumber" data-bind="value: MedicalNumber" required="" validationmessage="Please enter the medical number" type="text"></td>
-          </tr>
-
-        </tbody></table>
-
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" colspan="2">
+                                    <input type="submit" name="ctl00$MainContent$Login1$LoginButton" value="Log In" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$Login1$LoginButton&quot;, &quot;&quot;, true, &quot;Login1&quot;, &quot;&quot;, false, false))" id="ctl00_MainContent_Login1_LoginButton" class="button" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
     <a class="k-button k-button-icontext k-grid-update" href="#"><span class="k-icon k-update"></span>Update</a><a class="k-button k-button-icontext k-grid-cancel" href="#"><span class="k-icon k-cancel"></span>Cancel</a></div>
 
 </div>
