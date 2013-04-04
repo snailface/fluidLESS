@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en">
 <!--[if lt IE 8]><html class="ie"><![endif]-->
 
@@ -34,16 +34,6 @@
 
  <style type="text/css">
 
-.front-card {
-    height: 328px;
-    margin: -354px 0 0 -418px;
-    top: 50%;
-    width: 838px;
-}
-.front-card {
-    left: 50%;
-    position: absolute;
-}
 body.ms-windows, body.ms-windows label, body.ms-windows input, body.ms-windows textarea, body.ms-windows select, body.ms-windows button {
     font-family: Arial,sans-serif;
 }
@@ -54,7 +44,16 @@ body {
     min-height: 70%;
 }
 
-
+.front-card {
+    height: 328px;
+    margin: -354px 0 0 -418px;
+    top: 50%;
+    width: 838px;
+}
+.front-card {
+    left: 50%;
+    position: absolute;
+}
 
 .front-container-full-signup .front-welcome {
     background: none repeat scroll 0 center transparent;
@@ -73,19 +72,23 @@ body {
     width: 520px;
 }
 
-
 .front-signin, .front-signup {
-    background: -moz-linear-gradient(center top , #FFFFFF 0px, #DDDDDD 100%) repeat scroll 0 0 transparent;
-    border-bottom: 1px solid #CCCCCC;
-    border-left: 1px solid #EEEEEE;
-    border-right: 1px solid #EEEEEE;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+ 
+
+  background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top, #ffffff 1%, #dddddd 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ffffff), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #ffffff 1%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #ffffff 1%,#dddddd 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #ffffff 1%,#dddddd 100%); /* IE10+ */
+background: linear-gradient(to bottom, #ffffff 1%,#dddddd 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); 
 }
 .front-welcome, .front-signin, .front-signup {
     border-radius: 4px 4px 4px 4px;
 }
 .front-signin {
-    height: 168px;
+    height: 158px;
     left: 536px;
     position: absolute;
     top: 0;
@@ -93,10 +96,14 @@ body {
     padding:10px;
 }
 
+.front-signin .remember, .front-signin .forgot, .front-signin .separator {
+    color: #333;
+    font-size: 12px;
+    line-height: 13px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
 
-
-
-    </style>
+</style>
 
 
 	</head>
@@ -133,8 +140,8 @@ body {
 <div class="front-card hidden-phone">
     <div class="front-welcome">
       <div class="front-welcome-text">
-        <h4 style="color: #fff; font-size: 24px;text-align: left;text-shadow: 0 1px 2px #000000;">Welcome to Web Services.</h4>
-        <p style="color: #EEEEEE;font-size: 20px;font-weight: 300;line-height: 22px;text-align: left;text-shadow: 0 1px 2px #000000;">Find out what’s happening in your municipality, right now, with up-to-date information at your fingertips.</p>
+        <h4 style="color: #fff; font-size: 24px;text-align: left;text-shadow: 0 1px 2px #000000;">Welcome to your Web Services.</h4>
+        <p style="color: #EEEEEE;font-size: 20px;font-weight: 300;line-height: 22px;text-align: left;text-shadow: 0 1px 2px #000000;">Find out what’s happening in our municipality, right now, with up-to-date information at your fingertips.</p>
       </div>
 
     </div>
