@@ -41,6 +41,7 @@
 
 .modal-body {
     max-height: 800px;
+    min-width: 300px;
 }
 
 .form-horizontal input + .help-block, .form-horizontal select + .help-block, .form-horizontal textarea + .help-block, .form-horizontal .uneditable-input + .help-block, .form-horizontal .input-prepend + .help-block, .form-horizontal .input-append + .help-block {
@@ -57,53 +58,6 @@
   <body lang="en">
 <!--  Logo --> 
 <img src="http://torbay.ca/App_Themes/default/img/torbay-logo.jpg">
-
-<div class="alert alert-error" style="width:50%;  margin-left: auto ;
-  margin-right: auto ;">  
-  <a class="close" data-dismiss="alert">×</a>  
-  <strong>Warning!</strong> Best check yo self, you're not looking too good.  
-</div> 
-
-<!-- Desktop Login -->       
-<div class="front-card hidden-phone">
-    <div class="front-welcome">
-      <div class="front-welcome-text">
-        <h4 style="color: #fff; font-size: 24px;text-align: left;text-shadow: 0 1px 2px #000000;">Welcome to your Web Services.</h4>
-        <p style="color: #EEEEEE;font-size: 20px;font-weight: 300;line-height: 22px;text-align: left;text-shadow: 0 1px 2px #000000;">Find out what’s happening in our municipality, right now, with up-to-date information at your fingertips.</p>
-      </div>
-
-    </div>
-
-    <div class="front-signin js-front-signin">
-       <form class="flex-table-primary" autocomplete="off">
-        <h4 class="form-signin-heading">Please sign in</h4>
-        <input type="text" class="input-block-level" placeholder="Email address">
-        <table class="flex-table password-signin">
-          <tbody>
-          <tr>
-            <td class="flex-table-primary">
-              <div class="placeholding-input password flex-table-form">
-                <input type="password" class="input-block-level" style="width:225px" placeholder="Password">
-                
-              </div>
-            </td>
-            <td class="flex-table-secondary" style="vertical-align: top;">
-              <button class="btn btn-primary" style="margin-left:5px;float: right;white-space: nowrap;width: auto;" type="submit">Sign in</button>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-        <label class="remember">
-            <input type="checkbox" tabindex="3" name="remember_me" value="1">
-            <span>Remember me</span>
-          </label><br>
-          <span class="separator" style="float: right">
-          <a href="#" class="forgot">Forgot your password?</a><br>
-          <a href="#myModal" class="forgot" data-toggle="modal">Create an Account</a>
-          </span>
-      </form>
-    </div>
-  </div>
 
 <!-- Register User -->
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -212,11 +166,24 @@
   </div>
 </div>
 
-<!-- Mobile Login --> 
-  <div class="visible-phone">
-     <h1> Hello mobile user! </h1>
+<div class="alert alert-error" style="width:50%;  margin-left: auto ;
+  margin-right: auto ;">  
+  <a class="close" data-dismiss="alert">×</a>  
+  <strong>Warning!</strong> Best check yo self, you're not looking too good.  
+</div> 
 
-       <form class="flex-table-primary">
+<!-- Desktop Login -->       
+<div class="front-card hidden-phone">
+    <div class="front-welcome">
+      <div class="front-welcome-text">
+        <h4 style="color: #fff; font-size: 24px;text-align: left;text-shadow: 0 1px 2px #000000;">Welcome to your Web Services.</h4>
+        <p style="color: #EEEEEE;font-size: 20px;font-weight: 300;line-height: 22px;text-align: left;text-shadow: 0 1px 2px #000000;">Find out what’s happening in our municipality, right now, with up-to-date information at your fingertips.</p>
+      </div>
+
+    </div>
+
+    <div class="front-signin js-front-signin">
+       <form class="flex-table-primary" autocomplete="off">
         <h4 class="form-signin-heading">Please sign in</h4>
         <input type="text" class="input-block-level" placeholder="Email address">
         <table class="flex-table password-signin">
@@ -224,12 +191,12 @@
           <tr>
             <td class="flex-table-primary">
               <div class="placeholding-input password flex-table-form">
-                <input type="text" class="input-block-level" style="width:225px" placeholder="Password">
+                <input type="password" class="input-block-level" style="width:225px" placeholder="Password">
                 
               </div>
             </td>
             <td class="flex-table-secondary" style="vertical-align: top;">
-              <button class="btn btn-large btn-primary" style="margin-left:5px;float: right;white-space: nowrap;width: auto;" type="submit">Sign in</button>
+              <button class="btn btn-primary" style="margin-left:5px;float: right;white-space: nowrap;width: auto;" type="submit">Sign in</button>
             </td>
           </tr>
           </tbody>
@@ -240,9 +207,144 @@
           </label><br>
           <span class="separator" style="float: right">
           <a href="#" class="forgot">Forgot your password?</a><br>
-          <a href="#" class="forgot">Create an Account</a>
+          <a href="#myModal" class="forgot" data-toggle="modal">Create an Account</a>
           </span>
       </form>
+    </div>
+  </div>
+
+
+
+<!-- Mobile Login --> 
+  <div class="visible-phone">
+     <h1> Hello mobile user! </h1>
+
+       <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true" href="#tab1" data-toggle="tab">Login</button>
+        <button class="btn" data-dismiss="modal" aria-hidden="true" href="#tab2" data-toggle="tab">Forgot Password</button>
+        <button class="btn" data-dismiss="modal" aria-hidden="true" href="#tab3" data-toggle="tab">Register Account</button>
+      </div>
+
+
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="tab1">
+            <form class="flex-table-primary">
+                <h4 class="form-signin-heading">Please sign in</h4>
+                <input type="text" class="input-block-level" placeholder="Email address">
+                <input type="password" class="input-block-level" placeholder="Password">  
+             
+                <label class="remember">
+                    <input type="checkbox" tabindex="3" name="remember_me" value="1">
+                    <span>Remember me</span>
+                  </label><br>
+              </form>
+        </div>
+        <div class="tab-pane fade" id="tab2">
+            <form class="flex-table-primary">
+                <h4 class="form-signin-heading">Forgot Password?</h4>
+                <input type="text" class="input-block-level" placeholder="Email address">
+                <table class="flex-table password-signin">
+                  <tbody>
+
+                  </tbody>
+                </table>
+
+              </form>
+        </div>
+        <div class="tab-pane fade" id="tab3">
+            
+
+<ul id="tab" class="nav nav-tabs">
+        <li class="active"><a href="#citizen2" data-toggle="tab">As a Citizen</a></li>
+        <li><a href="#outsider2" data-toggle="tab">As an Outsider</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="citizen2">
+            <p><form class="form-horizontal" autocomplete="off">
+        <fieldset>
+        <!-- Address form -->
+         
+        <!-- first-name input-->
+        
+        <label class="control-label">First Name</label>
+        <div class="controls">
+        <input id="full-name" name="full-name" type="text" placeholder="First name"
+        class="input-xlarge"> 
+        <p class="help-block"></p>
+        </div>
+
+        <!-- last-name input-->
+        
+        <label class="control-label">Last Name</label>
+        <div class="controls">
+        <input id="full-name" name="full-name" type="text" placeholder="Last name"
+        class="input-xlarge">
+        <p class="help-block"></p>
+        </div>
+
+        <!-- address-line1 input-->
+        
+        <label class="control-label">Address Line 1</label>
+        <div class="controls">
+        <input id="address-line1" name="address-line1" type="text" placeholder="Address line 1"
+        class="input-xlarge">
+        <p class="help-block">Street address, P.O. box, company name, c/o</p>
+        
+        </div>
+        <!-- address-line2 input-->
+        
+        <label class="control-label">Address Line 2</label>
+        <div class="controls">
+        <input id="address-line2" name="address-line2" type="text" placeholder="Address line 2"
+        class="input-xlarge">
+        <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
+        
+        </div>
+        <!-- city input-->
+        
+        <label class="control-label">City / Town</label>
+        <div class="controls">
+        <input id="city" name="city" type="text" placeholder="City" class="input-xlarge">
+        <p class="help-block"></p>
+     
+        </div>
+        <!-- region input-->
+     
+        <label class="control-label">Province / State</label>
+        <div class="controls">
+        <input id="region" name="region" type="text" placeholder="Province / State"
+        class="input-xlarge">
+        <p class="help-block"></p>
+       
+        </div>
+        <!-- postal-code input-->
+        
+        <label class="control-label">Postal Code / ZIP</label>
+        <div class="controls">
+        <input id="postal-code" name="postal-code" type="text" placeholder="Postal Code or ZIP"
+        class="input-xlarge">
+        <p class="help-block"></p>
+        
+        </div>
+        <!-- country select -->
+                <label class="control-label">Country</label>
+        <div class="controls">
+        <input id="postal-code" name="postal-code" type="text" placeholder="Country"
+        class="input-xlarge">
+        <p class="help-block"></p>
+        </div>
+        </fieldset>
+        </form></p>
+        </div>
+        <div class="tab-pane fade" id="outsider2">
+            <p>Outsiders arn't welcome in these parts.</p>
+        </div>
+
+    </div>
+        </div>
+  <div class="modal-footer">
+        <button class="btn btn-large btn-primary">Submit</button>
+      </div>
   </div>
 
 
