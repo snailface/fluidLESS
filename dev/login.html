@@ -34,70 +34,7 @@
 
  <style type="text/css">
 
-body.ms-windows, body.ms-windows label, body.ms-windows input, body.ms-windows textarea, body.ms-windows select, body.ms-windows button {
-    font-family: Arial,sans-serif;
-}
-body {
-    color: rgb(51, 51, 51);
-    font-size: 14px;
-    line-height: 18px;
-    min-height: 70%;
-}
 
-.front-card {
-    margin: 0 0 0 -50px;
-}
-.front-card {
-    top: 25%;
-    right: 20%;
-    width: 825px;
-    position: absolute;
-}
-
-.front-container-full-signup .front-welcome {
-    background: none repeat scroll 0 center transparent;
-    box-shadow: none;
-}
-.front-random-image-city-balcony .front-welcome {
-    border-radius: 6px 6px 6px 6px;
-}
-.front-welcome {
-    border: 0 none;
-    display: block;
-    height: 328px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 520px;
-}
-
-.front-signin, .front-signup {
- background: #ffffff; /* Old browsers */
-background: -moz-linear-gradient(top, #ffffff 1%, #dddddd 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ffffff), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #ffffff 1%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #ffffff 1%,#dddddd 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #ffffff 1%,#dddddd 100%); /* IE10+ */
-background: linear-gradient(to bottom, #ffffff 1%,#dddddd 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); 
-}
-.front-welcome, .front-signin, .front-signup {
-    border-radius: 4px 4px 4px 4px;
-}
-.front-signin {
-    left: 536px;
-    position: absolute;
-    top: 0;
-    width: 300px;
-    padding:10px;
-}
-
-.front-signin .remember, .front-signin .forgot, .front-signin .separator {
-    color: #333;
-    font-size: 12px;
-    line-height: 13px;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
-}
 
 </style>
 
@@ -106,31 +43,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   
   <body lang="en">
 
-  <!--
-     <form class="flex-table-primary">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="input-block-level" placeholder="Email address">
-        <table class="flex-table password-signin">
-          <tbody>
-          <tr>
-            <td class="flex-table-primary">
-              <div class="placeholding-input password flex-table-form">
-                <input type="text" class="input-block-level" style="" placeholder="Password">
-                
-              </div>
-            </td>
-            <td class="flex-table-secondary" style="vertical-align: top;">
-              <button class="btn btn-primary" style="margin-left:5px;float: right;white-space: nowrap;width: auto;" type="submit">Sign in</button>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-        
-      </form>
--->
 <img src="http://torbay.ca/App_Themes/default/img/torbay-logo.jpg">
         
 <div class="front-card hidden-phone">
@@ -151,7 +63,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
           <tr>
             <td class="flex-table-primary">
               <div class="placeholding-input password flex-table-form">
-                <input type="text" class="input-block-level" style="width:225px" placeholder="Password">
+                <input type="password" class="input-block-level" style="width:225px" placeholder="Password">
                 
               </div>
             </td>
@@ -173,32 +85,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     </div>
   </div>
     
-        
-
-    <!--<div class="front-signup js-front-signup">
-      <h4><strong>New to Web Services?</strong> Sign up</h4>
-    
-      <form method="post">
-        <div class="placeholding-input">
-          <input type="text" maxlength="20" name="user[name]" autocomplete="off" class="text-input" id="signup-user-name">
-          <label class="placeholder" for="signup-user-name">Full name</label>
-        </div>
-        <div class="placeholding-input">
-          <input type="text" name="user[email]" autocomplete="off" class="text-input email-input" id="signup-user-email">
-          <label class="placeholder" for="signup-user-email">Email</label>
-        </div>
-        <div class="placeholding-input">
-          <input type="password" name="user[user_password]" class="text-input" id="signup-user-password">
-          <label class="placeholder" for="signup-user-password">Password</label>
-        </div>
-    
-        <button class="btn signup-btn" type="submit">
-          Sign up for Web Services
-        </button>
-      </form>
-    </div>
-  </div>
-  -->
 
   <div class="visible-phone">
      <h1> Hello mobile user! </h1>
