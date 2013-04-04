@@ -19,9 +19,14 @@
     
     <script src="assets/javascript/accountnav.js"></script>
     <script src="assets/javascript/bootstrap/bootstrap-dropdown.js"></script>
+    <script src="assets/javascript/bootstrap/bootstrap-modal.js"></script>
     <script src="assets/javascript/bootstrap/bootstrap-button.js"></script>
+    <script src="assets/javascript/bootstrap/bootstrap-alert.js"></script>
     <script src="assets/javascript/bootstrap/bootstrap-tooltip.js"></script>
     <script src="assets/javascript/bootstrap/bootstrap-tab.js"></script>
+    <noscript>
+    <meta http-equiv="REFRESH" content="0;url=http://www.google.com"></HEAD>
+    </noscript>
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -34,7 +39,15 @@
 
  <style type="text/css">
 
+.modal-body {
+    max-height: 800px;
+}
 
+.form-horizontal input + .help-block, .form-horizontal select + .help-block, .form-horizontal textarea + .help-block, .form-horizontal .uneditable-input + .help-block, .form-horizontal .input-prepend + .help-block, .form-horizontal .input-append + .help-block {
+    margin: 10px 0 5px 5px;
+    padding: 0px;
+    margin-top: 3px;
+}
 
 </style>
 
@@ -42,9 +55,16 @@
   </head>
   
   <body lang="en">
-
+<!--  Logo --> 
 <img src="http://torbay.ca/App_Themes/default/img/torbay-logo.jpg">
-        
+
+<div class="alert alert-error" style="width:50%;  margin-left: auto ;
+  margin-right: auto ;">  
+  <a class="close" data-dismiss="alert">×</a>  
+  <strong>Warning!</strong> Best check yo self, you're not looking too good.  
+</div> 
+
+<!-- Desktop Login -->       
 <div class="front-card hidden-phone">
     <div class="front-welcome">
       <div class="front-welcome-text">
@@ -55,7 +75,7 @@
     </div>
 
     <div class="front-signin js-front-signin">
-       <form class="flex-table-primary">
+       <form class="flex-table-primary" autocomplete="off">
         <h4 class="form-signin-heading">Please sign in</h4>
         <input type="text" class="input-block-level" placeholder="Email address">
         <table class="flex-table password-signin">
@@ -79,13 +99,120 @@
           </label><br>
           <span class="separator" style="float: right">
           <a href="#" class="forgot">Forgot your password?</a><br>
-          <a href="#" class="forgot">Create an Account</a>
+          <a href="#myModal" class="forgot" data-toggle="modal">Create an Account</a>
           </span>
       </form>
     </div>
   </div>
-    
 
+<!-- Register User -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Register your Account!</h3>
+    </div>
+  <div class="modal-body">
+
+
+
+<ul id="tab" class="nav nav-tabs">
+        <li class="active"><a href="#citizen" data-toggle="tab">As a Citizen</a></li>
+        <li><a href="#outsider" data-toggle="tab">As an Outsider</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="citizen">
+            <p><form class="form-horizontal" autocomplete="off">
+        <fieldset>
+        <!-- Address form -->
+         
+        <!-- first-name input-->
+        
+        <label class="control-label">First Name</label>
+        <div class="controls">
+        <input id="full-name" name="full-name" type="text" placeholder="First name"
+        class="input-xlarge"> 
+        <p class="help-block"></p>
+        </div>
+
+        <!-- last-name input-->
+        
+        <label class="control-label">Last Name</label>
+        <div class="controls">
+        <input id="full-name" name="full-name" type="text" placeholder="Last name"
+        class="input-xlarge">
+        <p class="help-block"></p>
+        </div>
+
+        <!-- address-line1 input-->
+        
+        <label class="control-label">Address Line 1</label>
+        <div class="controls">
+        <input id="address-line1" name="address-line1" type="text" placeholder="Address line 1"
+        class="input-xlarge">
+        <p class="help-block">Street address, P.O. box, company name, c/o</p>
+        
+        </div>
+        <!-- address-line2 input-->
+        
+        <label class="control-label">Address Line 2</label>
+        <div class="controls">
+        <input id="address-line2" name="address-line2" type="text" placeholder="Address line 2"
+        class="input-xlarge">
+        <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
+        
+        </div>
+        <!-- city input-->
+        
+        <label class="control-label">City / Town</label>
+        <div class="controls">
+        <input id="city" name="city" type="text" placeholder="City" class="input-xlarge">
+        <p class="help-block"></p>
+     
+        </div>
+        <!-- region input-->
+     
+        <label class="control-label">Province / State</label>
+        <div class="controls">
+        <input id="region" name="region" type="text" placeholder="Province / State"
+        class="input-xlarge">
+        <p class="help-block"></p>
+       
+        </div>
+        <!-- postal-code input-->
+        
+        <label class="control-label">Postal Code / ZIP</label>
+        <div class="controls">
+        <input id="postal-code" name="postal-code" type="text" placeholder="Postal Code or ZIP"
+        class="input-xlarge">
+        <p class="help-block"></p>
+        
+        </div>
+        <!-- country select -->
+                <label class="control-label">Country</label>
+        <div class="controls">
+        <input id="postal-code" name="postal-code" type="text" placeholder="Country"
+        class="input-xlarge">
+        <p class="help-block"></p>
+        </div>
+        </fieldset>
+        </form></p>
+        </div>
+        <div class="tab-pane fade" id="outsider">
+            <p>Outsiders arn't welcome in these parts.</p>
+        </div>
+    </div>
+
+     
+
+    
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Submit</button>
+  </div>
+</div>
+
+<!-- Mobile Login --> 
   <div class="visible-phone">
      <h1> Hello mobile user! </h1>
 
@@ -102,7 +229,7 @@
               </div>
             </td>
             <td class="flex-table-secondary" style="vertical-align: top;">
-              <button class="btn btn-primary" style="margin-left:5px;float: right;white-space: nowrap;width: auto;" type="submit">Sign in</button>
+              <button class="btn btn-large btn-primary" style="margin-left:5px;float: right;white-space: nowrap;width: auto;" type="submit">Sign in</button>
             </td>
           </tr>
           </tbody>
