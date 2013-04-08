@@ -1,11 +1,11 @@
 # fluidLESS
-##Version: 1.7
+##Version: 1.7.1
 
 Is a fluid-width grid system composed out of 18 even columns utilizing LESS. Based on Joni Korpi's [Golden Grid System](https://github.com/jonikorpi/Golden-Grid-System).
 
 ## Version History
 
-
+- ** 08/04/13 - Version 1.7.1 Released - Added login, updated multiple framework varibles and LESS to 1.3.3 and Bootstrap
 - ** 10/02/13 - Version 1.7 Released - Added Bootstrap and multiple bug fixes
 - ** 14/09/12 - Version 1.6 Released - Multiple varibles added to settings.less to make framework much more flexible
 - ** 24/07/12 - Version 1.5.1 Released - Multiple kendo fixes & updates

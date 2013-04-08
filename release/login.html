@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<!--[if lt IE 8]><html class="ie"><![endif]-->
+
+  
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    
+    <title>fluidLESS: barebones login. </title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet/less" href="assets/less/bootstrap/bootstrap.less" type="text/css">
+    <link rel="stylesheet/less" href="assets/less/fluid.less" type="text/css">
+
+  
+    <script src="assets/javascript/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/javascript/less.js" type="text/javascript"></script>
+    
+    <script src="assets/javascript/accountnav.js"></script>
+    <script src="assets/javascript/bootstrap/bootstrap-dropdown.js"></script>
+    <script src="assets/javascript/bootstrap/bootstrap-modal.js"></script>
+    <script src="assets/javascript/bootstrap/bootstrap-button.js"></script>
+    <script src="assets/javascript/bootstrap/bootstrap-alert.js"></script>
+    <script src="assets/javascript/bootstrap/bootstrap-tooltip.js"></script>
+    <script src="assets/javascript/bootstrap/bootstrap-tab.js"></script>
+    <noscript>
+    <meta http-equiv="REFRESH" content="0;url=http://www.google.com"></HEAD>
+    </noscript>
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="assets/images/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/icon.png"/>
+    
+    <meta name="description" content="fluidLESS: barebones"/>
+
+
+ <style type="text/css">
+
+.modal-body {
+    max-height: 800px;
+    min-width: 300px;
+}
+
+.form-horizontal input + .help-block, .form-horizontal select + .help-block, .form-horizontal textarea + .help-block, .form-horizontal .uneditable-input + .help-block, .form-horizontal .input-prepend + .help-block, .form-horizontal .input-append + .help-block {
+    margin: 10px 0 5px 5px;
+    padding: 0px;
+    margin-top: 3px;
+}
+
+</style>
+
+
+  </head>
+  
+  <body lang="en">
+<!--  Logo --> 
+<img src="http://torbay.ca/App_Themes/default/img/torbay-logo.jpg">
+
+<!-- Register User -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Register your Account!</h3>
+    </div>
+  <div class="modal-body">
+
+<ul id="tab" class="nav nav-tabs">
+        <li class="active"><a href="#citizen" data-toggle="tab">As a Citizen</a></li>
+        <li><a href="#outsider" data-toggle="tab">As an Outsider</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="citizen">
+            <p><form class="form-horizontal" autocomplete="off">
+        <fieldset>
+        <!-- Address form -->
+         
+        <!-- first-name input-->
+        
+        <label class="control-label">First Name</label>
+        <div class="controls">
+        <input id="full-name" name="full-name" type="text" placeholder="First name"
+        class="input-xlarge"> 
+        <p class="help-block"></p>
+        </div>
+
+        <!-- last-name input-->
+        
+        <label class="control-label">Last Name</label>
+        <div class="controls">
+        <input id="full-name" name="full-name" type="text" placeholder="Last name"
+        class="input-xlarge">
+        <p class="help-block"></p>
+        </div>
+
+        <!-- address-line1 input-->
+        
+        <label class="control-label">Address Line 1</label>
+        <div class="controls">
+        <input id="address-line1" name="address-line1" type="text" placeholder="Address line 1"
+        class="input-xlarge">
+        <p class="help-block">Street address, P.O. box, company name, c/o</p>
+        
+        </div>
+        <!-- address-line2 input-->
+        
+        <label class="control-label">Address Line 2</label>
+        <div class="controls">
+        <input id="address-line2" name="address-line2" type="text" placeholder="Address line 2"
+        class="input-xlarge">
+        <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
+        
+        </div>
+        <!-- city input-->
+        
+        <label class="control-label">City / Town</label>
+        <div class="controls">
+        <input id="city" name="city" type="text" placeholder="City" class="input-xlarge">
+        <p class="help-block"></p>
+     
+        </div>
+        <!-- region input-->
+     
+        <label class="control-label">Province / State</label>
+        <div class="controls">
+        <input id="region" name="region" type="text" placeholder="Province / State"
+        class="input-xlarge">
+        <p class="help-block"></p>
+       
+        </div>
+        <!-- postal-code input-->
+        
+        <label class="control-label">Postal Code / ZIP</label>
+        <div class="controls">
+        <input id="postal-code" name="postal-code" type="text" placeholder="Postal Code or ZIP"
+        class="input-xlarge">
+        <p class="help-block"></p>
+        
+        </div>
+        <!-- country select -->
+                <label class="control-label">Country</label>
+        <div class="controls">
+        <input id="postal-code" name="postal-code" type="text" placeholder="Country"
+        class="input-xlarge">
+        <p class="help-block"></p>
+        </div>
+        </fieldset>
+        </form></p>
+        </div>
+        <div class="tab-pane fade" id="outsider">
+            <p>Outsiders arn't welcome in these parts.</p>
+        </div>
+    </div>
+    
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Submit</button>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Desktop Login --> 
+
+<div class="hidden-phone">
+
+<div class="alert alert-error" style="width:50%;  margin-left: auto ;
+  margin-right: auto ;">  
+  <a class="close" data-dismiss="alert">×</a>  
+  <strong>Warning!</strong> Best check yo self, you're not looking too good.  
+</div> 
+
+<div class="front-card hidden-phone">
+
+    <div class="front-welcome">
+      <div class="front-welcome-text">
+        <h4 style="color: #fff; font-size: 24px;text-align: left;text-shadow: 0 1px 2px #000000;">Welcome to your Web Services.</h4>
+        <p style="color: #EEEEEE;font-size: 20px;font-weight: 300;line-height: 22px;text-align: left;text-shadow: 0 1px 2px #000000;">Find out what’s happening in our municipality, right now, with up-to-date information at your fingertips.</p>
+      </div>
+
+
+
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="login">
+            <div class="front-signin js-front-signin">
+               <form class="flex-table-primary" autocomplete="off">
+                <h4 class="form-signin-heading">Please sign in</h4>
+                <input type="text" class="input-block-level" placeholder="Email address">
+                <table class="flex-table password-signin">
+                  <tbody>
+                  <tr>
+                    <td class="flex-table-primary">
+                      <div class="placeholding-input password flex-table-form">
+                        <input type="password" class="input-block-level" style="width:225px" placeholder="Password">
+                        
+                      </div>
+                    </td>
+                    <td class="flex-table-secondary" style="vertical-align: top;">
+                      <button class="btn btn-primary" style="margin-left:5px;float: right;white-space: nowrap;width: auto;" type="submit">Sign in</button>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <label class="remember">
+                    <input type="checkbox" tabindex="3" name="remember_me" value="1">
+                    <span>Remember me</span>
+                  </label><br>
+                  <span class="separator" style="float: right">
+                  <a href="#forgot" class="forgot" data-toggle="tab">Forgot your password?</a><br>
+                  <a href="#myModal" class="forgot" data-toggle="modal">Create an Account</a>
+                  </span>
+              </form>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="forgot">
+            <div class="front-signin js-front-signin">
+                <form class="flex-table-primary">
+                   <form class="flex-table-primary" autocomplete="off">
+                    <h4 class="form-signin-heading">Forgot your password?</h4>
+                    <input type="text" class="input-block-level" placeholder="Email address">
+                    
+                          <button class="btn btn-primary" style="margin-left:5px;float: right;" type="submit">Retrieve</button>
+                        <p></p>
+                    <label class="remember">
+                        <input type="checkbox" tabindex="3" name="remember_me" value="1">
+                        <span>Remember me</span>
+                      </label><br>
+                      <span class="separator" style="float: right">
+                      <a href="#login" class="forgot" data-toggle="tab">Login</a><br>
+                      <a href="#myModal" class="forgot" data-toggle="modal">Create an Account</a>
+                      </span>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+</div>
+
+
+
+
+
+<!-- Mobile Login --> 
+  <div class="visible-phone">
+     <h1> Hello mobile user! </h1>
+
+       <div class="modal-footer">
+        <button class="btn btn-mini" data-dismiss="modal" aria-hidden="true" href="#tab1" data-toggle="tab">Login</button>
+        <button class="btn btn-mini" data-dismiss="modal" aria-hidden="true" href="#tab3" data-toggle="tab">Register Account</button>
+        <button class="btn btn-mini btn-warning" data-dismiss="modal" aria-hidden="true" href="#tab2" data-toggle="tab">Forgot Password</button>
+      </div>
+
+
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="tab1">
+            <form class="flex-table-primary">
+                <h4 class="form-signin-heading">Please sign in</h4>
+                <input type="text" class="input-block-level" placeholder="Email address">
+                <input type="password" class="input-block-level" placeholder="Password">  
+             
+                <label class="remember">
+                    <input type="checkbox" tabindex="3" name="remember_me" value="1">
+                    <span>Remember me</span>
+                  </label><br>
+              </form>
+        </div>
+        <div class="tab-pane fade" id="tab2">
+            <form class="flex-table-primary">
+                <h4 class="form-signin-heading">Forgot Password?</h4>
+                <input type="text" class="input-block-level" placeholder="Email address">
+                <table class="flex-table password-signin">
+                  <tbody>
+
+                  </tbody>
+                </table>
+
+              </form>
+        </div>
+
+        <div class="tab-pane fade" id="tab3">
+            
+
+            <ul id="tab" class="nav nav-tabs">
+                    <li class="active"><a href="#citizen2" data-toggle="tab">As a Citizen</a></li>
+                    <li><a href="#outsider2" data-toggle="tab">As an Outsider</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="citizen2">
+                        <p><form class="form-horizontal" autocomplete="off">
+                    <fieldset>
+                    <!-- Address form -->
+                     
+                    <!-- first-name input-->
+                        
+                    <input id="full-name" name="full-name" type="text" placeholder="First name"
+                    class="input-block-level"> 
+                    <p class="help-block"></p>
+                    
+                    <!-- last-name input-->
+                    
+                    <input id="full-name" name="full-name" type="text" placeholder="Last name"
+                    class="input-block-level">
+                    <p class="help-block"></p>
+
+                    <!-- address-line1 input-->
+
+                    <input id="address-line1" name="address-line1" type="text" placeholder="Address line 1"
+                    class="input-block-level">
+                    <p class="help-block">Street address, P.O. box, company name, c/o</p>
+
+                    <!-- address-line2 input-->
+                    
+                    <input id="address-line2" name="address-line2" type="text" placeholder="Address line 2"
+                    class="input-block-level">
+                    <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
+                    
+                    <!-- city input-->
+                    
+                    <input id="city" name="city" type="text" placeholder="City" class="input-block-level">
+                    <p class="help-block"></p>
+
+                    <!-- region input-->
+                 
+                    <input id="region" name="region" type="text" placeholder="Province / State"
+                    class="input-block-level">
+                    <p class="help-block"></p>
+
+                    <!-- postal-code input-->
+                    
+                    <input id="postal-code" name="postal-code" type="text" placeholder="Postal Code or ZIP"
+                    class="input-block-level">
+                    <p class="help-block"></p>
+
+                    <!-- country select -->
+
+                    <input id="postal-code" name="postal-code" type="text" placeholder="Country"
+                    class="input-block-level">
+                    <p class="help-block"></p>
+
+                    </fieldset>
+                    </form></p>
+                    </div>
+                    <div class="tab-pane fade" id="outsider2">
+                        <p>Outsiders arn't welcome in these parts.</p>
+                    </div>
+
+                </div>
+    </div>
+  <div class="modal-footer">
+        <button class="btn btn-large btn-primary">Submit</button>
+      </div>
+  </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,91 @@
+/*
+*
+*  Custom LESS Stack
+*  by Snailface     <http://snailface.com/>
+* 
+*/
+
+
+//
+// Add your own LESS/CSS here to flavour the framework to your liking
+//
+
+p {padding: 10px;} 
+
+#active li {color:#666}
+
+textarea {height:150px}
+input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input { height:30px}
+
+  
+
+
+// Dropdown Account Navigation Override
+
+.navbar .nav.pull-right .dropdown-menu {
+  left: auto;
+  right: 0;
+  &:before {
+    left: auto;
+    right: 12px;
+  }
+  &:after {
+    left: auto;
+    right: 13px;
+  }
+}
+
+.dropdown-menu {
+    background-clip: padding-box;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    left: 0;
+    list-style: none outside none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 5px 0;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+}
+
+#btn-group-acct {
+    position:absolute;
+    right:0px;
+    top:10px;
+    clear:none;
+    padding: 5px 0 5px;
+    z-index:9998;
+}
+
+// Dropdown Accoutn Navigation Override
+
+.navbar .nav.pull-right .dropdown-menu {
+  left: auto;
+  right: 0;
+  &:before {
+    left: auto;
+    right: 12px;
+  }
+  &:after {
+    left: auto;
+    right: 13px;
+  }
+}
+
+
+//Override third party links to use fluidLESS settings
+.k-state-hover > .k-link, .btn-group li a:hover, .dropdown-menu li > a:hover, .dropdown-menu li > a:focus
+{
+    background: @primary;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.dropdown-submenu:hover > a
+ {
+    background: @secoundary;
+    color: #FFFFFF;
+    text-decoration: none;
+}
