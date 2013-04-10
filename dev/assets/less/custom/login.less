@@ -5,10 +5,31 @@
 * 
 */
 
+
+
 body.ms-windows, body.ms-windows label, body.ms-windows input, body.ms-windows textarea, body.ms-windows select, body.ms-windows button {
     font-family: Arial,sans-serif;
+    background-image: url(../images/background.jpg);
 }
 
+.front-bg {
+          position: fixed; 
+          top: -50%; 
+          left: -50%; 
+          width: 200%; 
+          height: 200%;
+          z-index:-1;
+}
+.front-bg img {
+          position: absolute; 
+          top: 0; 
+          left: 0; 
+          right: 0; 
+          bottom: 0; 
+          margin: auto; 
+          min-width: 50%;
+          min-height: 50%;
+}
 .front-card {
         top: 25%;
         left: 54%;
@@ -62,3 +83,5 @@ body.ms-windows, body.ms-windows label, body.ms-windows input, body.ms-windows t
     line-height: 13px;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
 }
+
+
